@@ -191,7 +191,7 @@ public class MyApplication extends Application
         editor = sharedPreferences.edit();
 
 
-        try {
+        /*try {
             PackageInfo info = getPackageManager().getPackageInfo(
                     "com.doconline.doconline",  // replace with your unique package name
                     PackageManager.GET_SIGNATURES);
@@ -205,7 +205,7 @@ public class MyApplication extends Application
             e.printStackTrace();
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
-        }
+        }*/
 
         fetch_firebase_remote_config();
         ViewTarget.setTagId(R.id.glide_tag);
