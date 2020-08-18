@@ -844,7 +844,7 @@ public class MyApplication extends Application
                 String customer_care_number = remoteConfig.getString(Constants.KEY_CUSTOMER_CARE_NUMBER);
                 long max_file_size = remoteConfig.getLong(Constants.KEY_MAX_FILE_SIZE);
 
-                if(BuildConfig.DEBUG) {
+                //if(BuildConfig.DEBUG) {
                     mSession.putBaseURL("https://demo.doconline.com/");
                     mSession.putOAuthClientSecret("test");
                     mSession.putOAuthClientID(String.valueOf(3));
@@ -856,16 +856,16 @@ public class MyApplication extends Application
                     mSession.putOAuthClientID(String.valueOf(2));
                     mSession.putEnvPrefix("staging");
                     mSession.putRazorpayApiKey("rzp_test_pGc2kHLLywFzbe");*/
-                }
+                //}
 
-                else
+                /*else
                 {
                     mSession.putBaseURL(base_url);
                     mSession.putOAuthClientSecret(client_secret);
                     mSession.putOAuthClientID(String.valueOf(client_id));
                     mSession.putEnvPrefix(env_prefix);
                     mSession.putRazorpayApiKey(String.valueOf(razorpay_api_key));
-                }
+                }*/
 
                 mSession.putRingingDuration(ringing_duration);
                 mSession.putAppointmentCallbackTimeLimit(callback_time_limit);
