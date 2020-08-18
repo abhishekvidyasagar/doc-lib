@@ -561,7 +561,8 @@ public class Constants {
     public static final String DEFAULT_ENV_PREFIX = "production";
     public static final String DEFAULT_CLIENT_ID = "2";
     public static final String DEFAULT_CLIENT_SECRET = "CKjZKNQMfIWGWQCaaYWECsV5sV0qqDA9wuvalI9b";
-    public static final String DEFAULT_BASE_URL = "https://app.doconline.com/";
+    //public static final String DEFAULT_BASE_URL = "https://app.doconline.com/";
+    public static final String DEFAULT_BASE_URL = "https://demo.doconline.com/";
     public static final String DEFAULT_OPENTOK_KEY = "45750702";
     public static final String DEFAULT_FB_CLIENT_ID = "1622284567783206";
     public static final String DEFAULT_RAZORPAY_KEY = "rzp_live_x7EYqVpFpaC5RY";
