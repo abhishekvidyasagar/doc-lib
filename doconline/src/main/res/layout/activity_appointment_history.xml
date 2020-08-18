@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/AppBarLayoutStyle" >
+
+        <include layout="@layout/toolbar_layout" />
+
+        <!--
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:tabMode="fixed"
+            app:layout_anchor="@+id/appbar"
+            app:layout_anchorGravity="bottom"
+            style="@style/CustomTabStyle"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabIndicatorHeight="0dp" />
+        -->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabMode="fixed"
+            android:layout_gravity="bottom"
+            android:background="@drawable/action_bar_bg"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        style="@style/PageControllerStyle"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Knock ! Knock!"
+        android:gravity="center"
+        android:id="@+id/noitems_diag_historyy"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:padding="10dp"/>-->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

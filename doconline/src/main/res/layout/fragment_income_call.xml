@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentIncomeCall"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:visibility="visible"
+    android:background="@drawable/incoming_call_background" >
+
+    <LinearLayout
+        android:id="@+id/layout_caller_info"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation = "vertical" >
+
+        <TextView
+            android:id = "@+id/call_type"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text = "@string/text_incoming_video_call"
+            android:textColor = "@color/white"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/padding_60"
+            android:textSize = "14sp" />
+
+        <FrameLayout
+            android:id="@+id/layout_caller"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id = "@+id/profile_image"
+                android:layout_width = "180dp"
+                android:layout_height = "180dp"
+                android:layout_gravity="center"
+                android:src = "@drawable/doctor"
+                app:civ_border_color = "@color/white"
+                app:civ_border_width = "2dp"
+                android:visibility="visible" />
+
+            <com.github.ybq.android.spinkit.SpinKitView
+                android:id="@+id/spin_kit_circulation"
+                style="@style/SpinKitView.Small.Pulse"
+                android:layout_width = "240dp"
+                android:layout_height = "240dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:SpinKit_Color="@color/colorAccent" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id = "@+id/layout_info_about_call"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity = "center_horizontal"
+            android:orientation = "vertical">
+
+            <TextView
+                android:id = "@+id/doctor_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor = "@color/white"
+                android:text=""
+                android:textSize = "@dimen/incoming_call_type_text_size" />
+
+            <TextView
+                android:id = "@+id/text_caller_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:ellipsize = "end"
+                android:gravity = "center"
+                android:maxLines = "1"
+                android:textColor = "@color/white"
+                android:textSize = "@dimen/caller_name_text_size"
+                android:text = "@string/app_name" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_call_summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:gravity="center">
+
+        <TextView
+            android:id = "@+id/call_summary"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text = "Call Summary"
+            android:textColor = "@color/white"
+            android:gravity="center"
+            android:visibility="visible"
+            android:textSize = "14sp" />
+
+        <Chronometer
+            android:id="@+id/chrono_call_duration"
+            android:textColor = "@color/white"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:text="0:00" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_answer_button"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom = "true"
+        android:layout_centerHorizontal = "true"
+        android:layout_marginBottom = "@dimen/padding_30"
+        android:layout_marginStart = "@dimen/padding_30"
+        android:layout_marginEnd = "@dimen/padding_30"
+        android:padding="@dimen/padding_15"
+        android:clipToPadding = "false" >
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id = "@+id/image_button_reject_call"
+            android:background="@drawable/reject_call_button_style"
+            android:src="@drawable/ic_phone_hangup_white"
+            android:contentDescription="@null"
+            android:onClick="onClickReject"
+            android:elevation="5dp"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:id = "@+id/image_button_accept_call"
+            android:contentDescription="@null"
+            android:onClick="onClickAccept"
+            android:elevation="5dp"
+            android:src = "@drawable/ic_phone_white"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/accept_call_button_style" />
+
+    </RelativeLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/layout_connecting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:gravity="center" >
+
+        <TextView
+            android:id = "@+id/text_connection_status"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor = "@color/white"
+            android:text="Connecting"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:paddingEnd="@dimen/padding_5"
+            android:paddingStart="@dimen/padding_0"
+            android:textSize = "14sp" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit_connecting"
+            style="@style/SpinKitView.Small.ThreeBounce"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:gravity="center"
+            app:SpinKit_Color="@color/white" />
+
+    </LinearLayout>
+    -->
+
+    <!--
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:context=".tokbox.onetoone.CallingActivity">
+
+        <FrameLayout
+            android:id="@+id/camera_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imgClose"
+            android:layout_gravity="right|top"
+            android:background="@android:drawable/ic_menu_close_clear_cancel"
+            android:padding="20dp"/>
+
+    </FrameLayout>
+    -->
+
+</RelativeLayout>

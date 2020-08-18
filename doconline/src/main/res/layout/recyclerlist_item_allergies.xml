@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/padding_5"
+    android:layout_margin="1dp"
+    android:background="@drawable/primary_color_grey_round_button_style" >
+
+    <TextView
+        android:id="@+id/tv_allergies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_not_available"
+        android:paddingEnd="@dimen/padding_10"
+        android:paddingStart="@dimen/padding_0"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <ImageButton
+        android:id="@+id/ib_delete"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible"
+        android:background="@drawable/no_border"
+        android:src="@drawable/ic_close_circle_white"
+        android:contentDescription="@null"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

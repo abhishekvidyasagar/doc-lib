@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+package="com.doconline.doconline" >
+
+<uses-sdk tools:overrideLibrary="com.facebook" />
+
+<uses-permission android:name="android.permission.GET_TASKS" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.CAMERA" />
+<uses-permission android:name="android.permission.VIBRATE" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.WAKE_LOCK" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.REORDER_TASKS" />
+<uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+<uses-permission android:name="android.permission.READ_CALENDAR" />
+<uses-permission android:name="android.permission.WRITE_CALENDAR" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+<!--
+<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+<uses-permission android:name="android.permission.READ_SMS" />
+-->
+<uses-feature android:name="android.hardware.camera" />
+<uses-feature android:name="android.hardware.camera.autofocus" />
+
+<application
+    android:name=".app.MyApplication"
+    android:allowBackup="true"
+    android:appComponentFactory="@string/app_name"
+    android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+    android:icon="@mipmap/ic_launcher"
+    android:label="@string/app_name"
+    android:supportsRtl="true"
+    android:theme="@style/MyTheme"
+    android:requestLegacyExternalStorage="true"
+    tools:replace="android:allowBackup,android:icon,android:theme,android:appComponentFactory">
+    <activity android:name=".Blogs"></activity>
+    <activity android:name=".FitMeIn.BarcodeScanner" />
+    <activity android:name=".FitMeIn.StudiosWorkoutsList" />
+    <activity android:name=".FitMeIn.StudiosListActivity" />
+    <activity
+        android:name=".SplashScreenActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait">
+
+    </activity>
+    <activity
+        android:name=".HomeActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:host="app.doconline.com"
+                android:pathPrefix="/dl"
+                android:scheme="https" />
+            <data
+                android:host="staging.doconline.com"
+                android:pathPrefix="/dl"
+                android:scheme="https" />
+            <data
+                android:host="beta.doconline.com"
+                android:pathPrefix="/dl"
+                android:scheme="https" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".DashboardActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar" />
+    <activity
+        android:name=".login.MainActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:hardwareAccelerated="false"
+        android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data
+                android:host="app.doconline.com"
+                android:pathPrefix="/user/login"
+                android:scheme="https" />
+            <data
+                android:host="staging.doconline.com"
+                android:pathPrefix="/user/login"
+                android:scheme="https" />
+            <data
+                android:host="beta.doconline.com"
+                android:pathPrefix="/user/login"
+                android:scheme="https" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".consultation.BookConsultationActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustPan" />
+    <activity
+        android:name=".consultation.guest.BookGuestConsultationActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustPan" />
+    <activity
+        android:name=".appointment.AppointmentHistoryActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait">
+        <intent-filter>
+            <action android:name="OPEN_ACTIVITY_HISTORY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".appointment.AppointmentSummeryActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan">
+        <intent-filter>
+            <action android:name="OPEN_ACTIVITY_SUMMERY" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name=".AddonsActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".disease.MedicationManagementActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name=".disease.MedicationsActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name=".ehr.VitalsManagementActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name=".ehr.VitalsActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ehr.VitalInfoActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ehr.VitalsListActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".ehr.EHRActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustPan" />
+    <activity
+        android:name=".ehr.FileUploadActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustPan" />
+    <activity
+        android:name=".ehr.PrescriptionActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden|adjustPan" />
+    <activity
+        android:name=".profile.SettingsActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".disease.AllergyManagementActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".profile.PreferredLanguageActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="stateHidden" />
+    <activity
+        android:name=".profile.ProfileActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme.NoActionBar"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name="com.facebook.FacebookActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar"
+        tools:replace="android:theme" />
+    <activity
+        android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+        android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+    <activity
+        android:name=".PinchZoomActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".MultipleImageViewerActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".FileViewerActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".subscription.SubscriptionActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name=".profile.FamilyMemberActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".profile.BMIResultsActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".profile.ConsentFormActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".tokbox.CallingActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:excludeFromRecents="true"
+        android:launchMode="singleInstance"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".chat.FirebaseChatActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".chat.ChatImagePreviewActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".chat.ChatHistoryActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".subscription.BillingHistoryActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".diagnostics.DiagnosticsActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name=".diagnostics.DiagnosticsHistoryActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustPan" />
+    <activity
+        android:name=".diagnostics.DiagnosticsUserAddressActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".notification.NotificationActivity"
+        android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation">
+        <intent-filter>
+            <action android:name="OPEN_ACTIVITY_NOTIFICATION" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity android:name=".GPS.GoogleGpsFinder" />
+    <activity
+        android:name="com.paytm.pgsdk.PaytmPGActivity"
+        android:configChanges="keyboardHidden|orientation|keyboard"
+        android:screenOrientation="portrait" />
+    <activity android:name=".Paytm.checksum" />
+
+    <meta-data
+        android:name="com.facebook.sdk.ApplicationId"
+        android:value="@string/facebook_app_id" />
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyCUDG-dIOE-rFItp4sv6eTQYUGS3gcrIP4" /> <!-- android:value="AIzaSyCUDG-dIOE-rFItp4sv6eTQYUGS3gcrIP4" -->
+    <meta-data
+        android:name="com.google.android.gms.version.DEPENDENCIES"
+        android:value="barcode" />
+    <!--
+         Set custom default icon. This is used when no icon is set for incoming notification messages.
+         See README(https://goo.gl/l4GJaQ) for more.
+    -->
+    <!--
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_icon"
+        android:resource="@drawable/ic_bell" />
+    -->
+    <!--
+         Set color used with incoming notification messages. This is used when no color is set for the incoming
+         notification message. See README(https://goo.gl/6BKBk7) for more.
+    -->
+    <!--
+    <meta-data
+        android:name="com.google.firebase.messaging.default_notification_color"
+        android:resource="@android:color/holo_blue_dark" />
+    -->
+    <!-- Declare Notification Receiver -->
+    <receiver
+        android:name=".tokbox.service.IncomingCallActionReceiver"
+        android:enabled="true"
+        android:exported="false" />
+    <receiver
+        android:name=".service.NotificationActionReceiver"
+        android:enabled="true"
+        android:exported="false" />
+    <receiver
+        android:name=".service.ActionButtonReceiver"
+        android:enabled="true"
+        android:exported="false" />
+    <receiver
+        android:name=".service.NotificationDeleteReceiver"
+        android:enabled="true"
+        android:exported="false" /> <!-- Declare Notification Receiver -->
+    <receiver
+        android:name=".service.NotificationCancelReceiver"
+        android:enabled="true"
+        android:exported="false" /> <!-- Declare Apps Flyer Broadcast Receiver -->
+    <!--
+<receiver
+        android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="com.android.vending.INSTALL_REFERRER" />
+        </intent-filter>
+    </receiver> &lt;!&ndash; receiver for AdGyde &ndash;&gt;
+    <receiver
+        android:name="com.adgyde.android.InstallReceiver"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="com.android.vending.INSTALL_REFERRER" />
+        </intent-filter>
+    </receiver>
+    -->
+    <service
+        android:name=".service.PushMsgService"
+        android:enabled="true"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.MESSAGING_EVENT" />
+        </intent-filter>
+    </service>
+    <service
+        android:name=".service.PushInstanceIdService"
+        android:enabled="true"
+        android:exported="false">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+        </intent-filter>
+    </service>
+    <service
+        android:name=".floating.TimerService"
+        android:enabled="true"
+        android:exported="false" />
+    <service
+        android:name=".tokbox.service.ClosingService"
+        android:stopWithTask="false" />
+    <service android:name="com.appsflyer.FirebaseInstanceIdListener">
+        <intent-filter>
+            <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+        </intent-filter>
+    </service> <!-- defining the service class here -->
+    <activity
+        android:name=".NotificationIntentHandlerActivity"
+        android:excludeFromRecents="true"
+        android:theme="@style/Theme.AppCompat.Transparent" />
+
+    <receiver
+        android:name=".tokbox.service.IncomingCallReceiver"
+        android:enabled="true"
+        android:exported="false"
+        android:label="Call Receiver">
+        <intent-filter android:priority="999">
+            <action android:name="cb.doconline.VOIP" />
+        </intent-filter>
+    </receiver>
+
+    <activity
+        android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity"
+        android:theme="@style/OverrideMultipleImageSelectTheme"
+        tools:replace="android:theme">
+        <intent-filter>
+            <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+        </intent-filter>
+    </activity>
+    <activity
+        android:name="com.darsh.multipleimageselect.activities.ImageSelectActivity"
+        android:theme="@style/OverrideMultipleImageSelectTheme"
+        tools:replace="android:theme">
+        <intent-filter>
+            <category android:name="ANDROID.INTENT.CATEGORY.DEFAULT" />
+        </intent-filter>
+    </activity>
+
+    <receiver android:name=".service.AlarmReceiver">
+        <intent-filter>
+            <action android:name="android.media.action.APPOINTMENT_REMINDER_NOTIFICATION" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </receiver>
+    <receiver android:name=".service.MedicationAlarmReceiver">
+        <intent-filter>
+            <action android:name="android.media.action.MEDICATION_REMINDER_NOTIFICATION" />
+
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+    </receiver>
+    <receiver android:name=".service.SMSBroadcastReceiver">
+        <intent-filter>
+            <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+        </intent-filter>
+    </receiver>
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.provider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+        <meta-data
+            android:name="android.support.FILE_PROVIDER_PATHS"
+            android:resource="@xml/provider_paths" />
+    </provider>
+
+    <activity
+        android:name=".order.OrderActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" /> <!-- Add your API key here -->
+    <!--
+    <meta-data
+        android:name="com.razorpay.ApiKey"
+        android:value="rzp_test_AsXrFThYrXeVNt" />
+    -->
+    <!-- Rollbar API Key -->
+    <!--
+    <meta-data
+        android:name="com.rollbar.android.ACCESS_TOKEN"
+        android:value="d3170e3f361c46b99f17d84a96d2736e" />
+    -->
+    <activity
+        android:name=".diagnostics.DiagnosticsReportsStatusActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".medicalremainders.MRHome"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".medicalremainders.MRAddRemainder"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".medicalremainders.MRSelectTime"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".medicalremainders.MRSelectMedicine"
+        android:screenOrientation="portrait" />
+
+    <receiver android:name=".medicalremainders.AlarmReceiver" />
+
+    <activity
+        android:name=".medicalremainders.MRSelectDosage"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".medicalremainders.RemainderDetails"
+        android:screenOrientation="portrait" />
+
+    <receiver
+        android:name=".medicalremainders.DailyWakeUpReceiver"
+        android:enabled="true"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+        </intent-filter>
+    </receiver>
+
+    <activity
+        android:name=".profile.SpeedTestActivity"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation="portrait" />
+    <activity android:name=".profile.DrugAllergyActivity" />
+    <activity android:name=".profile.PregnancyStatus" />
+    <activity android:name=".consultation.PreviousAppointmentsActivity" />
+    <activity
+        android:name=".FitMeIn.FitMeInActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".FitMeIn.WorkoutDetailsActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".FitMeIn.HistoryActivity"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name=".HRA.HRAMainActivity"
+        android:screenOrientation="portrait" />
+    <activity android:name=".HRA.HRAResultsActivity" />
+</application>
+
+</manifest>

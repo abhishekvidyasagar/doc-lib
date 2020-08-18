@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_terms_and_condition"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/padding_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextPrimaryColor"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:text="Patient consent to authorize main user to book appointment with DocOnline on their behalf"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextPrimaryColor"
+            android:gravity="start"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/padding_30"
+            android:text="I hereby authorize my attendant (Main User) registered under the subscription of DocOnline platform to
+book an appointment on behalf of me by using the Phone Number/Mail ID registered with DocOnline
+Telemedicine Platform."/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minWidth="70dp"
+        android:layout_marginBottom="@dimen/padding_15"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="#727272"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:text="Decline" />
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="?attr/colorPrimary"
+            android:text="I Accept" />
+
+    </LinearLayout>
+
+</RelativeLayout>

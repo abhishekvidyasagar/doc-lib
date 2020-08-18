@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/card_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="0dp"
+    card_view:cardBackgroundColor="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_margin="0dp" >
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minHeight="40dp"
+        android:padding="10dp"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/image_menu"
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_drag_vertical"
+            android:tint="@color/colorAccent"
+            android:padding="10dp"
+            android:visibility="gone"
+            android:contentDescription="@null"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="English"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="16sp" />
+
+        <CheckBox
+            android:id="@+id/check_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/SampleCheckboxTheme"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radio_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/SampleRadioButtonTheme"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <shape>
+
+            <solid
+                android:color="@color/white" />
+
+            <stroke
+                android:width="2dp"
+                android:color="@color/white" />
+
+            <corners
+                android:radius="50dp" />
+
+        </shape>
+    </item>
+
+
+    <item>
+        <shape>
+
+            <solid
+                android:color="@color/white" />
+
+            <stroke
+                android:width="2dp"
+                android:color="@color/white" />
+
+            <corners
+                android:radius="50dp" />
+
+        </shape>
+    </item>
+</selector>
+
+<!--
+<vector xmlns:android = "http://schemas.android.com/apk/res/android"
+        android:width = "106dp"
+        android:height = "106dp"
+        android:viewportHeight = "106.0"
+        android:viewportWidth = "106.0">
+    <path
+        android:fillColor = "#66f56234"
+        android:pathData = "M1.26,52.61a51.93,51.91 0,1 0,103.87 0a51.93,51.91 0,1 0,-103.87 0z"
+        android:strokeColor = "@color/white"
+        android:strokeWidth = "2" />
+</vector>
+-->

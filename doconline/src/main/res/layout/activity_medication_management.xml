@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    tools:context="com.doconline.doconline.disease.MedicationManagementActivity" >
+
+    <include layout="@layout/appbar_layout" />
+    <include layout="@layout/layout_medication_management" />
+    <include layout="@layout/layout_footer_button" />
+    <include layout="@layout/layout_block_ui" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

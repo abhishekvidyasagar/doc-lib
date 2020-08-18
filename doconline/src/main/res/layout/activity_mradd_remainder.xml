@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ParentLayoutStyle"
+    tools:context=".medicalremainders.MRAddRemainder">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/AppBarLayoutStyle" >
+
+        <include layout="@layout/toolbar_layout" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MEDICATION DETAILS"
+                android:textColor="@color/black"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Medications"
+                android:textColor="@color/black"
+                android:id="@+id/select_medicine"
+                android:padding="10dp"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_arrow_right_white"
+                android:background="@color/background_color_light_grey"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Select Dosage"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:id="@+id/select_dosage"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_arrow_right_white"
+                android:background="@color/background_color_light_grey"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:id="@+id/medicineimagelay">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/medicineimage"
+                    android:padding="5dp"
+                    android:background="@drawable/ic_pill"
+                    android:layout_margin="5dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="selectMedicineImage"
+                    android:id="@+id/medicineimagename"
+                    android:hint=" + Click to select Medicine image"
+                    android:layout_gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="REMINDER DETAILS"
+                android:textColor="@color/black"
+                android:padding="5dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Add Time"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:id="@+id/selected_time"
+                android:onClick="selectTime"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/ic_arrow_right_white"
+                android:background="@color/background_color_light_grey"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/timelist_lay">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/footer">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Reminder"
+            android:background="?attr/colorPrimary"
+            android:textColor="@color/white"
+            android:onClick="saveRemainder"
+            android:id="@+id/save_reminder_tv"
+            android:textSize="20dp"
+            android:padding="5dp"
+            android:gravity="center"/>
+    </LinearLayout>
+
+</RelativeLayout>

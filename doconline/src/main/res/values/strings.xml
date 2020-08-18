@@ -1,0 +1,434 @@
+<resources>
+    <string name="app_name">DocOnline</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="facebook_app_id">1622284567783206</string>
+    <string name="Settings">Settings</string>
+
+    <string name="action_notification">Notification</string>
+    <string name="text_not_available">N/A</string>
+    <string name="text_refresh_waiting_time">Refresh Slots</string>
+
+    <string name="text_incoming_video_call">Incoming Video Call</string>
+    <string name="text_incoming_audio_call">Incoming Audio Call</string>
+
+    <string name="text_my_appointment">My Appointments</string>
+    <string name="text_appointment_summery">Appointment Summary</string>
+    <string name="text_dashboard">Dashboard</string>
+    <string name="text_subscription_plans">Select a Plan</string>
+    <string name="text_confirmation">Confirmation</string>
+    <string name="text_email_confirmation">Confirmation</string>
+    <string name="text_medications">Medications</string>
+    <string name="text_add_allergy">Add Allergy</string>
+    <string name="text_update_allergy">Update Allergy</string>
+    <string name="text_title">Title</string>
+    <string name="text_bmi_results">BMI Result</string>
+    <string name="text_vital_details">Vital Details</string>
+    <string name="text_vitals">Vitals</string>
+    <string name="text_terms_conditions">Terms &amp; Conditions</string>
+    <string name="text_languages">Languages</string>
+    <string name="text_preferred_language">Preferred Language</string>
+    <string name="text_add_ons">Add Ons</string>
+    <string name="text_chat_history">Chat History</string>
+    <string name="text_billing_history">Billing History</string>
+    <string name="text_billing_summary">Billing Summary</string>
+    <string name="text_health_profile">Health Profile</string>
+    <string name="text_family">Family Member</string>
+    <string name="text_chat_with_doctor">Chat with Doctor</string>
+
+    <string name="text_speed_test">Speed Test</string>
+
+
+    <string-array name="smoke_status">
+        <item><font size="13">Are you a Smoker ?</font></item>
+        <item><font size="13">No, I do not Smoke</font></item>
+        <item><font size="13">Yes</font></item>
+    </string-array>
+
+    <string name="hint_first_name_compulsary"><font size="13">First Name <sup>*</sup></font></string>
+    <string name="hint_name_compulsary"><font size="13">Name <sup>*</sup></font></string>
+    <string name="hint_medicine_compulsary"><font size="13">Medicine <sup>*</sup></font></string>
+    <string name="hint_middle_name"><font size="13">Middle Name </font></string>
+    <string name="hint_last_name_compulsary"><font size="13">Last Name <sup>*</sup></font></string>
+    <string name="hint_family_member_one"><font size="13">FAMILY MEMBER 1</font></string>
+    <string name="hint_family_member_two"><font size="13">FAMILY MEMBER 2</font></string>
+    <string name="hint_date_of_birth"><font size="13">Date of Birth <sup>*</sup></font></string>
+    <string name="hint_current_password"><font size="13">Current Password <sup>*</sup></font></string>
+    <string name="hint_new_password"><font size="13">New Password <sup>*</sup></font></string>
+    <string name="hint_password_confirmation"><font size="13">Confirm Password <sup>*</sup></font></string>
+    <string name="hint_password_compulsary"><font size="13">Password <sup>*</sup></font></string>
+    <string name="hint_password_confirm_compulsary"><font size="13">Confirm Password <sup>*</sup></font></string>
+    <string-array name="gender_of_user">
+        <item><font size="13">Choose Gender</font></item>
+        <item><font size="13">Male</font></item>
+        <item><font size="13">Female</font></item>
+        <item><font size="13">Transgender</font></item>
+    </string-array>
+    <string name="hint_email_compulsary"><font size="13">Email <sup>*</sup></font></string>
+    <string name="hint_contact_compulsary"><font size="13">Phone No <sup>*</sup></font></string>
+    <string name="hint_dob_compulsary"><font size="13">Date of Birth <sup>*</sup></font></string>
+    <string name="hint_date_form"><font size="13">From Date </font></string>
+    <string name="hint_date_to"><font size="13">To Date </font></string>
+    <string name="hint_intake_time"><font size="13">Intake Time </font></string>
+    <string name="hint_gender_compulsary"><font size="13">Gender <sup>*</sup></font></string>
+    <string name="hint_smoking"><font size="13">Smoking ? <sup>*</sup></font></string>
+    <string name="hint_medical_history"><font size="13">Medical History <sup>*</sup></font></string>
+    <string name="hint_address_compulsary"><font size="13">Address Line 1 <sup>*</sup></font></string>
+    <string name="hint_address">Address Line 2</string>
+    <string name="hint_city_compulsary"><font size="13">Town/City <sup>*</sup></font></string>
+    <string name="hint_state_compulsary"><font size="13">State <sup>*</sup></font></string>
+    <string name="hint_pin_code_compulsary"><font size="13">Pincode <sup>*</sup></font></string>
+    <string name="hint_country_compulsary"><font size="13">Country <sup>*</sup></font></string>
+    <string name="hint_phone_number"><font size="13">Phone No</font></string>
+    <string name="hint_alternate_phone_number"><font size="13">Alternate Phone No</font></string>
+    <string name="hint_enter_mobile_no">Enter Mobile No.</string>
+    <string name="hint_mobile_no">Mobile No.</string>
+
+    <string name="hint_enter_pincode">Pincode</string>
+    <string name="text__book_consultation">Book a Consultation</string>
+
+    <string name="network_quality">Network connection is unstable.</string>
+    <string name="type_your_message">Your Message</string>
+    <string name="add_caption">Add Caption</string>
+    <string name="text_forgot_password">Forgot password?</string>
+
+    <string name="hint_address_line_1">Address Line 1</string>
+    <string name="hint_address_line_2">Address Line 2</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="text_facebook">Facebook</string>
+    <string name="text_google_plus">Google</string>
+
+    <string name="text_sign_in_using">Sign in using</string>
+    <string name="text_or">or</string>
+
+    <string name="text_enter_pincode">Enter\nPincode</string>
+    <string name="text_edit_medicine">Edit\nMedicine</string>
+    <string name="text_update_address">Update\nAddress</string>
+    <string name="text_confirm_order">Confirm\nOrder</string>
+    <string name="text_your_details">Your Details</string>
+
+    <string name="text_book_consultation">Please feel free to share your  comments  or upload documents that can help you during the consultation.\n\nAs per strict legal policies, we ensure complete confidentiality  of
+all information and data.</string>
+
+    <string name="text_payment_halted">SERVICE HALTED</string>
+
+    <string name="hint_email">Email</string>
+    <string name="hint_email_or_mobile">Email / Mobile No.</string>
+    <string name="hint_email_or_mobile_or_mrn">Email / Mobile No. / MRN</string>
+    <string name="hint_phone">Mobile No</string>
+    <string name="hint_otp">OTP</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_coupon_code">Coupon Code</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_weight">Weight (Kg)</string>
+    <string name="hint_height">Height (cm)</string>
+    <string name="hint_caption">Add a Caption</string>
+
+
+    <string name="hint_weight_phr">Weight</string>
+    <string name="hint_height_phr">Height</string>
+    <string name="hint_pulse_rate">Pulse Rate</string>
+    <string name="hint_respiration_rate">Respiration Rate</string>
+    <string name="hint_blood_pressure">Blood Pressure</string>
+    <string name="hint_temperature">Temperature</string>
+    <string name="hint_spo2">SPO2</string>
+    <string name="hint_bmi">BMI</string>
+    <string name="hint_head_circumference">Head Circumference (Kids)</string>
+    <string name="hint_urine_output">Urine Output</string>
+    <string name="hint_RBS">Random Blood Sugar</string>
+
+
+    <string name="button_login">Login</string>
+    <string name="button_skip">Skip</string>
+    <string name="button_register">Register</string>
+    <string name="button_sign_in">Sign In</string>
+    <string name="button_save_history">Save History</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="button_submit">Submit</string>
+    <string name="button_reset_link">Send Password Reset Link</string>
+    <string name="button_continue">Continue</string>
+    <string name="button_verify">Verify</string>
+    <string name="button_forgot_password">Forgot Password ?</string>
+    <string name="button_new_user">Sign Up</string>
+    <string name="button_cancel_appointment">Cancel Appointment</string>
+    <string name="button_add_to_calendar">Add to Calendar</string>
+    <string name="button_existing_user">Sign In</string>
+    <string name="button_resend_otp">RESEND OTP</string>
+    <string name="button_enter_manually">ENTER MANUALLY</string>
+    <string name="button_add_new">Add New</string>
+
+    <string name="menu_save_photo">Download</string>
+    <string name="action_save">Save</string>
+    <string name="action_refresh">Refresh</string>
+
+    <string name="text_loading">Loading ...</string>
+    <string name="text_do_not_have_an_account">Do not have an account ?</string>
+    <string name="text_remember_me">Remember Me</string>
+    <string name="text_already_have_an_account">Already have an account ? </string>
+    <string name="text_back_connectivity_error">Internet Connectivity Failure</string>
+    <string name="text_back_button_press">Press Back Button Again to Exit</string>
+
+
+    <string name="text__book_diagnostics">Diagnostics</string>
+    <string name="text_diagnostics_user_addresses">Your Addresses</string>
+    <string name="text_diagnostics_add_user_addresses">New Address</string>
+    <string name="text_diagnostics_edit_user_addresses">Edit Address</string>
+
+    <!-- Dialogs -->
+    <string name="AreYouSure">Are you sure?</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+    <string name="OK">OK</string>
+    <string name="Add">Add</string>
+    <string name="Save">Save</string>
+    <string name="Update">Update</string>
+    <string name="Upgrade">Upgrade</string>
+    <string name="Submit">Submit</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Delete">Delete</string>
+    <string name="NotNow">Not Now</string>
+    <string name="Dismiss">Dismiss</string>
+    <string name="NextTime">NextTime</string>
+    <string name="Retry">Retry</string>
+    <string name="Close">Close</string>
+    <string name="Previous">Prev</string>
+    <string name="Next">Next</string>
+    <string name="End">End Test</string>
+    <string name="Edit">Edit</string>
+    <string name="Verify">Verify</string>
+    <string name="Calculate">Calculate</string>
+    <string name="StartNow">Start Now</string>
+    <string name="SetNow">Set Now</string>
+    <string name="NoThanks">No Thanks</string>
+    <string name="EndNow">End Now</string>
+    <string name="Subscribe">Subscribe</string>
+    <string name="Choose">Choose</string>
+    <string name="RetryPayment">Retry Payment</string>
+    <string name="OrderNow">Order Now</string>
+    <string name="CreateNow">Create Now</string>
+    <string name="Upload">Upload</string>
+    <string name="Search">Search</string>
+    <string name="Info">Info</string>
+
+    <string name="rationale_video_app">This app needs access to your camera and mic so you can perform video calls</string>
+
+    <string name="action_clear">Clear all Notifications</string>
+    <string name="action_mark_as_read">Mark all as Read</string>
+    <string name="text_notification">Notifications</string>
+
+    <string name="large_text">
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic."
+    </string>
+
+    <string name="pick_file">Pick file</string>
+    <string name="toast_pick_file_error">Unable to pick file. Check status of file manager.</string>
+
+    <string name="medication_delivery">Enter the Pincode</string>
+    <string name="medicine_name">Medicine Name</string>
+    <string name="medicine_id">Medicine ID : </string>
+    <string name="manufacturer">Manufacturer:</string>
+    <string name="quantity">Available Quantity : </string>
+    <string name="availability">Availability : </string>
+    <string name="pack_size_text">Pack Size:</string>
+    <string name="mrp">MRP:</string>
+    <string name="discount">Discount\n(%)</string>
+    <string name="price">Price</string>
+    <string name="required_packs_quantity">Packs:</string>
+    <string name="required_quantity">Required Quantity : </string>
+    <string name="prescribed_quantity">Prescribed\nQuantity</string>
+    <string name="no_of_pack">No of Pack</string>
+    <string name="available_pack">Available\nPack</string>
+    <string name="pack_size">Pack\nSize</string>
+
+    <string name="shipping_address">Shipping Address</string>
+    <string name="date">Date:</string>
+    <string name="tel_number">Phone:</string>
+    <string name="place_order">Place Order</string>
+    <string name="sub_total">Sub Total:</string>
+    <string name="quant">Quantity : </string>
+    <string name="mrp_per_pack">MRP/Pack</string>
+    <string name="total_price">Total Price</string>
+    <string name="unit_price">Price/Unit</string>
+    <string name="order_id">Order ID:</string>
+    <string name="order_date">Date:</string>
+    <string name="status">Status</string>
+    <string name="order_status">Order Status</string>
+    <string name="order_details">Order Details </string>
+
+    <string name="Rs">\u20B9</string>
+    <string name="rs">\u20A8</string>
+    <string name="power2">Kg/m\u00B2</string>
+
+    <!--//Temporary fix for space between list items-->
+    <string-array name="bmi_list_items">
+        <item>&#x2009;&#x2009;Below 18.5 &#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009; Under Weight</item>
+        <item>&#x2009;&#x2009;18.5 - 24.9 &#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009; Normal</item>
+        <item>&#x2009;&#x2009;25 - 29.9 &#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009; Over Weight</item>
+        <item>&#x2009;&#x2009;30 - 35 &#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009; Obese</item>
+        <item>&#x2009;&#x2009;Above 35 &#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009;&#x2009; Morbidly Obese</item>
+    </string-array>
+
+    <string name="delete">DELETE</string>
+
+
+    <string name="error_internet_connectivity">Internet not connected!</string>
+    <string name="error_http_default">Oops... Something Went Wrong</string>
+
+
+    <string name="dialog_title_logout">Logout</string>
+    <string name="dialog_title_chat_confirmation">Chat</string>
+    <string name="dialog_title_account_info">Account Information</string>
+    <string name="dialog_title_overlay_permission">Permission Required</string>
+    <string name="dialog_title_are_you_sure">Are you sure ?</string>
+    <string name="dialog_title_confirmation">Confirmation ?</string>
+    <string name="dialog_title_update_available">Update Available</string>
+    <string name="dialog_title_procure_medicine">Your prescribed medicines are ready for :</string>
+    <string name="dialog_title_file_picker">Select Action</string>
+
+    <string name="dialog_content_logout">Are you sure want to logout ?</string>
+    <string name="dialog_content_chat_confirmation">Do you want to start session ?</string>
+    <string name="dialog_content_set_password">Set account password for better security.</string>
+    <string name="dialog_content_update_available">A new version of DocOnline is available in play store. Do you want to update ?</string>
+    <string name="dialog_content_overlay_permission">You need to allow permission to display appointment reminder timer</string>
+    <string name="dialog_content_mobile_verification">Your mobile number is not verified.</string>
+    <string name="dialog_content_delete_warning">Deleted item can not be recovered!</string>
+    <string name="dialog_content_delete_record">Deleted record can not be recovered!</string>
+    <string name="dialog_content_delete_family_member">Deleted member can not be recovered!</string>
+    <string name="dialog_content_procure_medicine">Click here to order your prescribed medicines.</string>
+    <string name="button_diagnostics_add_new_address">ADD A NEW ADDRESS  ></string>
+    <string name="hint_user_address_lane">Address Lane 1*</string>
+    <string name="hint_user_address_landmark">Address Lane 2*</string>
+    <string name="hint_user_address_city">City*</string>
+    <string name="hint_user_address_state">State*</string>
+    <string name="hint_user_address_pincode">Pincode*</string>
+    <string name="hint_user_address_Mobile_Number">Mobile number*</string>
+    <string name="hint_user_Name">User name*</string>
+    <string name="hint_user_Email">Email address*</string>
+    <string name="hint_date">Date</string>
+    <string name="hint_time">Time</string>
+    <string name="text_terms_and_conditions">Terms and Conditions</string>
+    <string name="Rupee">\u20B9</string>
+
+    <string-array name="file_picker_options">
+        <item>Select from Gallery</item>
+        <item>Capture from Camera</item>
+        <item>Pick a File</item>
+    </string-array>
+
+    <string-array name="image_picker_options">
+        <item>Select from Gallery</item>
+        <item>Capture from Camera</item>
+    </string-array>
+
+    <string-array name="image_picker_with_view_and_remove_options">
+        <item>Select from Gallery</item>
+        <item>Capture from Camera</item>
+        <item>View Profile Picture</item>
+        <item>Remove Profile Picture</item>
+    </string-array>
+
+    <string name="customer_care_number">+91&#8211;8822 126 126</string>
+
+    <string name="dialog_title_diagnostics_payment_error">Payment failed!</string>
+    <string name="dialog_title_diagnostics_book_appointment_error">Appointment booking failed!</string>
+    <string name="static_text_diagnostics_info">MOST POPULAR AND RECENT TESTS DONE BY OTHERS</string>
+    <string name="static_text_diagnostics_searchInfo">You can also get below tests done at your doorstep</string>
+
+    <string name="dialog_diagnostics_address_delete_warning">Are you sure you want to delete this address?</string>
+    <string name="icon_diagnostics_cart">&#xf07a;</string>
+    <string name="dialog_diagnostics_cart_item_delete_warning">Are you sure you want to delete this item from cart?</string>
+    <string name="appointment_confirmed">Appointment Confirmed</string>
+    <string name="diagnostics_appointment_status_info">An executive from Thyrocare will be coming to your address at the mentioned time for collecting the sample and you can view the test result in the Appointment history section once they are available.</string>
+    <string name="static_text_appointment_confirmation">Your Appointment has been confirmed with</string>
+    <string name="choose_address">Choose Address :</string>
+
+
+    <string name="diagnostics_history">Diagnostics History</string>
+
+    <string name="text_diagnostics_details">Appointment Summary</string>
+    <string name="msg_no_attachments">No attachments to show</string>
+    <string name="you_can_track">You can track your order here</string>
+
+    <string name="text_medical_remainders_home">Medicine Reminders</string>
+
+    <string name="text_add_remainders">Add Reminders</string>
+
+    <string name="remainders_details">Reminder Details</string>
+
+    <string name="text_select_time">Select Time</string>
+    <string name="title_activity_mrselect_dosage">SelectDosage</string>
+    <string name="custom_dosage">Enter Custom Dosage</string>
+    <string name="custom_dosage_hint">Enter Dosage</string>
+    <string name="select_medicine">Select Medicine</string>
+
+    <string name="remider_Title">Time to have your medicine</string>
+    <string name="remider_Title_medi">For better health take the medicines on time</string>
+
+    <string name="text_select_medicine">Select Medicine</string>
+    <string name="add_drug_allergy">Add Drug Allergy</string>
+
+
+    <!--ic_medical insignts strings-->
+    <string name="hint_lifestyelactivity">Any Life style activities? </string>
+    <string name="hint_sleepstyle">Sleep style</string>
+    <string name="hint_totalsleepduration">Total sleep duration</string>
+    <string name="hint_sleeppattern">Sleep Pattern</string>
+    <string name="hint_exerciseperweek">Exercise Per week</string>
+    <string name="hint_pregnancystatus">Pregnancy Status</string>
+    <string name="hint_maritalstatus">Marital Status</string>
+    <string name="hint_switchinmedicine">Reason for Switch in the medicine</string>
+    <string name="hint_medicalhistory">Medical History</string>
+    <string name="hint_medicalinsurence">Medical Insurance</string>
+
+    <string name="pregnancy_status">Pregnancy Status</string>
+
+
+    <string-array name="reasonforfollowups">
+        <item></item>
+        <item>Doctor insisted for a follow up consultation</item>
+        <item>I am satisfied but still looking for a second opinion</item>
+        <item>I am dissatisfied and hence going for another consultation</item>
+    </string-array>
+
+    <!--HRA strings-->
+
+    <string name="hint_name">Name</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_height_">Height (CM)</string>
+    <string name="hint_weight_">Weight (KG)</string>
+    <string name="hint_waist_circum">Waist Circumference (CM)</string>
+    <string name="hint_bp">Do you know your recent blood pressure readings?</string>
+    <string name="hint_sys">Systolic</string>
+    <string name="hint_dis">Diastolic</string>
+    <string name="hint_diabetes">Have you ever diagnosed with Diabetes?</string>
+    <string name="hint_high_bp">Have you ever diagnosed with high blood pressure?</string>
+    <string name="hint_treatment_hypertension">Are you on treatment for your hypertension?</string>
+    <string name="hint_history_cardiovascular">History of cardiovascular disease</string>
+    <string name="hint_history_atrial_fibrillation">History of Atrial fibrillation</string>
+    <string name="hint_history_ventricular_hypertrophy">History of Ventricular hypertrophy</string>
+    <string name="hint_parent_diabetes">Has anyone of your parent diagnosed with diabetes?</string>
+    <string name="hint_parent_bp">Has anyone of your parent diagnosed with hypertension?</string>
+    <string name="hint_parent_cardiac">Has anyone of your parents diagnosed with cardiac problem?</string>
+    <string name="hint_smoke">Do you currently smoke?</string>
+    <string name="hint_cigarettes_per_day">How many cigarettes per day?</string>
+    <string name="hint_physical_activity">Describe your physical activity</string>
+    <string name="hint_calories">Your average calorie intake per day?</string>
+    <string name="text_hra">HRA</string>
+    <string name="text_hra_results">HRA Results</string>
+
+    <string name="frmingham_link"> <u>Framingham Heart Study</u>.</string>
+
+    <string name="view_more_underline">View more</string>
+
+    <string name="terms_and_conditions"> <u>terms and conditions</u></string>
+
+</resources>

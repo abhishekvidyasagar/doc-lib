@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="3dp"
+    card_view:cardBackgroundColor="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginBottom="4dp" >
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="120dp"
+        android:background="@color/white" >
+
+        <TextView
+            android:id="@+id/menu_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:minHeight="36dp"
+            android:textColor="@color/myTextPrimaryColor"
+            android:textSize="14sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:padding="8dp"
+            android:text="Book a Consultation" />
+
+        <TextView
+            android:id="@+id/scheduled_at"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="12sp"
+            android:layout_marginStart="@dimen/padding_5"
+            android:layout_marginTop="5dp"
+            android:gravity="center_vertical"
+            android:layout_below="@id/menu_title"
+            android:drawableStart="@drawable/ic_timer_icon"
+            android:drawableTint="?attr/colorPrimary"
+            android:drawablePadding="5dp"
+            android:text="July 12, 2016  3:35PM" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="4dp"
+            android:orientation="horizontal"
+            android:layout_below="@id/scheduled_at" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/doctor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="Dr. Akash Dutta" />
+
+                <TextView
+                    android:id="@+id/specialization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextSecondaryColor"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:text="Endoscopy" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/menu_icon"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="3dp"
+                android:contentDescription="@null"
+                android:layout_gravity="bottom"
+                android:src="@drawable/menu_appointments"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bottom_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/animation_list" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

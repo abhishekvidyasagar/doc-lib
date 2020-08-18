@@ -1,0 +1,119 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/myTextPrimaryColor"
+    android:fitsSystemWindows="true" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/myTextPrimaryColor"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:layout_collapseMode="parallax"
+        android:fillViewport="true"
+        android:layout_below="@+id/app_bar"
+        android:layout_above="@+id/footer"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <!--
+        <Button
+            android:id="@+id/download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Download"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:background="@drawano_borderrder"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:drawableTop="@drawable/ic_arrow_down_bold_circle_white_24dp"/>
+        -->
+
+        <com.doconline.doconline.helper.TouchImageView
+            android:id="@+id/imgFullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:contentDescription="@null" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        style="@style/ChatBoxLayoutFooterStyle"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="50dp"
+            android:layout_marginStart="5dp"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/editChat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="12dp"
+                android:maxLength="500"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:textSize="14sp"
+                android:background="@drawable/no_border"
+                android:textColor="@color/myTextSecondaryColor"
+                android:hint="@string/add_caption" />
+
+            <!--
+            <ImageButton
+                android:id="@+id/ibCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_paper_clip_2_512"
+                android:background="@drawano_borderrder"
+                android:layout_gravity="center"
+                android:onClick="onClick"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:visibility="visible"
+                android:contentDescription="@null" />
+             -->
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/fab"
+            android:gravity="end"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

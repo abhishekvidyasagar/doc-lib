@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/Width.Dialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@color/myTextPrimaryColor"
+            android:layout_marginBottom="@dimen/padding_15"
+            android:text="BMI Calculator"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_height"
+            style="@style/TextInputLayoutStyle" >
+
+            <EditText
+                android:id="@+id/editHeight"
+                style="@style/EditTextStyle"
+                android:hint="@string/hint_height"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_weight"
+            style="@style/TextInputLayoutStyle" >
+
+            <EditText
+                android:id="@+id/editWeight"
+                style="@style/EditTextStyle"
+                android:hint="@string/hint_weight"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

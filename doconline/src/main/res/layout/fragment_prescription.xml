@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_marginBottom="@dimen/padding_50"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

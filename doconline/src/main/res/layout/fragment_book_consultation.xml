@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/padding_50"
+    android:animateLayoutChanges="true"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_hotline_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e8ffde"
+            android:gravity="center"
+            android:padding="@dimen/padding_10"
+            android:text="Call our hot line number to schedule an appointment"
+            android:textColor="#656565"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/top_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_0"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:layout_marginBottom="@dimen/padding_5"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_25">
+
+            <TextView
+                android:id="@+id/book_consultation_text"
+                style="@style/BookConsultationLabel"
+                android:text="Whom would you like to book for?"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectangle_curve_edges_white_style"
+                android:elevation="2dp"
+                android:minHeight="56dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_appointment_for_who"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:dropDownSelector="?attr/colorPrimary"
+                    android:gravity="center_vertical"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="0dp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/type_of_call_text"
+                style="@style/BookConsultationLabel"
+                android:text="What mode of consultation would you prefer?" />
+
+            <RelativeLayout
+                android:id="@+id/segmentVideoOrAudio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/btn_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?attr/colorPrimary"
+                    android:drawableLeft="@drawable/ic_icon_video"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_15"
+                    android:text="Video"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/medo"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/medo"
+                    android:layout_centerInParent="true"/>
+
+                <TextView
+                    android:id="@+id/btn_audio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/grey_background"
+                    android:drawableLeft="@drawable/ic_icon_voice_inactive"
+                    android:gravity="center"
+                    android:padding="@dimen/padding_15"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toRightOf="@+id/medo"
+                    android:text="Audio"
+                    android:textColor="@color/text_dim_grey"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- <co.ceryle.segmentedbutton.SegmentedButtonGroup
+                 android:id = "@+id/segmentVideoOrAudio"
+                 android:layout_width = "match_parent"
+                 android:layout_height = "wrap_content"
+                 app:sbg_animateSelector = "accelerateDecelerate"
+                 app:sbg_animateSelectorDuration = "400"
+                 app:sbg_backgroundColor = "#f7f7f7"
+                 app:sbg_borderColor = "@color/text_dim_black"
+                 app:sbg_borderSize = "0dp"
+                 app:sbg_dividerColor = "#00000000"
+                 app:sbg_dividerPadding = "10dp"
+                 app:sbg_dividerRadius = "4dp"
+                 app:sbg_dividerSize = "0.5dp"
+                 app:sbg_radius = "2dp"
+                 app:sbg_selectorColor = "@color/myPrimaryColor"
+                 app:sbg_selectorTextColor = "@color/myTextSecondaryColor"
+                 app:sbg_shadow = "true"
+                 app:sbg_shadowElevation = "1dp">
+
+                 <co.ceryle.segmentedbutton.SegmentedButton
+                     style="@style/SegmentedButtonStyle"
+                     android:drawableStart = "@drawable/ic_icon_video_inactive"
+                     android:text = "Video"
+                     app:sb_imageScale = "1"
+                     app:sb_rippleColor = "@color/myPrimaryColor"
+                     app:sb_selectedImageTint = "@color/white"
+                     app:sb_selectedTextColor = "@color/white" />
+
+                 <co.ceryle.segmentedbutton.SegmentedButton
+                     style="@style/SegmentedButtonStyle"
+                     android:drawableStart = "@drawable/ic_icon_voice_inactive"
+                     android:text = "Audio"
+                     app:sb_imageScale = "1"
+                     app:sb_rippleColor = "@color/myPrimaryColor"
+                     app:sb_selectedImageTint = "@color/white"
+                     app:sb_selectedTextColor = "@color/white" />
+
+             </co.ceryle.segmentedbutton.SegmentedButtonGroup>
+ -->
+
+            <RadioGroup
+                android:id="@+id/radio_group_call_medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="end"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/call_medium_internet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_10"
+                    android:checked="true"
+                    android:text="Internet" />
+
+                <RadioButton
+                    android:id="@+id/call_medium_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Telephone" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/appointment_date_text"
+                style="@style/BookConsultationLabel"
+                android:text="Would you like to book an appointment today or scheduled it at another time?" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="We are available from Monday to Saturday 9:00 AM to 9:00 PM." />
+
+            <RelativeLayout
+                android:id="@+id/segmentInstantOrSchedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:id="@+id/btn_wait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_15"
+                    android:background="?attr/colorPrimary"
+                    android:drawableLeft="@drawable/ic_icon_clock_white"
+                    android:gravity="center"
+                    android:text="Waiting Room"
+                    android:textStyle="bold"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/medt"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/medt"/>
+                <TextView
+                    android:id="@+id/btn_schedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_15"
+                    android:layout_alignParentEnd="true"
+                    android:textStyle="bold"
+                    android:layout_toRightOf="@+id/medt"
+                    android:drawableLeft="@drawable/ic_icon_calender_inactive"
+                    android:gravity="center"
+                    android:background="@color/grey_background"
+                    android:text="Schedule"
+                    android:textColor="@color/text_dim_grey" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/v_container_waiting_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_5"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_waiting_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Waiting "
+                    android:textColor="@color/text_dim_grey"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_waiting_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_5"
+                    android:gravity="center"
+                    android:text="@string/text_not_available"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_selected_time_slot_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <include
+                layout="@layout/layout_languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/rectangle_curve_edges_white_style"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/layout_consent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/padding_10"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_consent_text"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="start|center"
+                    android:text="Allow doctor to access my documents"
+                    android:textColor="@color/text_dim_grey"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_consent"
+                    style="@style/MySwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:gravity="end|center" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/upload_data_text"
+                style="@style/BookConsultationLabel"
+                android:text="@string/text_book_consultation" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editNotes"
+                    style="@style/EditTextStyle"
+                    android:layout_weight="1"
+                    android:hint="Add Notes"
+                    android:inputType="textMultiLine"
+                    android:isScrollContainer="true"
+                    android:maxLength="500" />
+
+                <TextView
+                    android:id="@+id/tv_attach_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:layout_marginBottom="@dimen/padding_5"
+                    android:drawableStart="@drawable/ic_icon_camera"
+                    android:drawablePadding="@dimen/padding_5"
+                    android:text="Upload Files"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!--
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp"
+                android:text="Upload Files"
+                android:drawableStart="@drawable/ic_icon_camera"
+                android:textSize="14sp"
+                android:textAllCaps="false"
+                android:background="@drawable/button_bg_dashed_border" />
+            -->
+
+            <LinearLayout
+                android:id="@+id/layout_attachments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/rectangle_curve_edges_white_style"
+                android:padding="5dp"
+                android:visibility="gone">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/image_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/tandc_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I agree to "
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tandc_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/terms_and_conditions"
+                    android:textColor="@color/blue" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

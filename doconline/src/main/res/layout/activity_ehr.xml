@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle" >
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/AppBarLayoutStyle" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolbar_layout" />
+
+            <br.com.liveo.searchliveo.SearchLiveo
+                android:id="@+id/search_liveo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/padding_40"
+                android:layout_gravity="end|center" />
+
+        </FrameLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/white"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabMode="fixed"
+            android:layout_gravity="bottom"
+            android:background="@drawable/action_bar_bg"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        style="@style/PageControllerStyle"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include layout="@layout/layout_fab_submenu"/>
+
+    <LinearLayout
+        android:id="@+id/layout_consent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/background_color_light_grey"
+        android:paddingStart="@dimen/padding_10"
+        android:paddingEnd="@dimen/padding_10"
+        android:paddingBottom="@dimen/padding_5"
+        android:paddingTop="@dimen/padding_5"
+        android:clickable="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal" >
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/check_consent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:checked="false" />
+
+        <TextView
+            android:id="@+id/tv_consent_text"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="@color/myTextPrimaryColor"
+            android:gravity="start|center"
+            android:layout_weight="1"
+            android:textSize="13sp"
+            android:text="Allow doctor to access my documents." />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

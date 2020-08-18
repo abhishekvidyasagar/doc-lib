@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_25"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="Enter OTP"
+        android:layout_marginBottom="@dimen/padding_30"
+        android:layout_marginTop="@dimen/padding_30" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editFirstDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editSecondDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editThirdDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editFourthDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editFifthDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editSixthDigit"
+            style="@style/EditOTPTextStyle" />
+
+    </LinearLayout>
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/button_next"
+        android:layout_margin="20dp" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="normal"
+        android:textSize="13sp"
+        android:text="00:00"
+        android:visibility="invisible"
+        android:textColor="@color/colorAccent" />
+
+    <Button
+        android:id="@+id/btnResendOTP"
+        style="@style/LinkButtonStyle"
+        android:onClick="onClick"
+        android:layout_gravity="center"
+        android:textSize="13sp"
+        android:layout_marginBottom="15dp"
+        android:text="@string/button_resend_otp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:textColor="@color/myTextPrimaryColor"
+        android:text = "" />
+
+    <!--
+    <Button
+        android:id="@+id/btnExistingUser"
+        style="@style/LinkButtonStyle"
+        android:onClick="onClick"
+        android:layout_gravity="center"
+        android:text="@string/button_sign_in" />
+    -->
+
+</LinearLayout>

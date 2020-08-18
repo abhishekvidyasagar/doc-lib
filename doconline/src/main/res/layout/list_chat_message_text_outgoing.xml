@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginStart="@dimen/padding_50"
+    android:layout_marginBottom="@dimen/padding_5"
+    android:layout_marginTop="@dimen/padding_5"
+    android:layout_marginEnd="12dp" >
+
+    <LinearLayout
+        android:id="@+id/layout_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_outgoing"
+        android:padding="@dimen/padding_10"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_cdn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/cdn_photo"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:clickable="true" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/singleMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="100dp"
+            android:textSize="13sp"
+            android:layout_marginTop="1dp"
+            android:text="Android charting application xml ui design."
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/layout_message"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="end" >
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="12sp"
+            android:text="2:03 AM"
+            android:paddingEnd="3dp"
+            android:paddingStart="0dp"
+            android:textColor="@color/place_holder" />
+
+        <ImageView
+            android:id="@+id/status"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:contentDescription="@null"
+            android:visibility="gone"
+            android:src="@null" />
+
+    </LinearLayout>
+
+</RelativeLayout>

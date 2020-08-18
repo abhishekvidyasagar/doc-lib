@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Consultation "
+        android:drawableRight="@drawable/com_facebook_tooltip_black_xout"
+        android:padding="5dp"
+        android:gravity="center"
+        android:id="@+id/cancel_followup"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:id="@+id/followup_rg">
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Is it a follow up consultation ? "
+            android:id="@+id/followup"
+            android:tag="1"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Is it a second opinion ? "
+            android:id="@+id/second_opinion"
+            android:tag="2"/>
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Consultation ? "
+            android:tag="2"
+            android:id="@+id/new_consultation"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ok"
+        android:id="@+id/button_ok"
+        android:layout_margin="5dp"
+        android:textColor="@color/white"
+        android:background="?attr/colorPrimary"/>
+
+</LinearLayout>

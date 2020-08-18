@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ParentLayoutStyle"
+    tools:context=".HRA.HRAMainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/AppBarLayoutStyle" >
+
+        <include layout="@layout/toolbar_layout" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:layout_above="@+id/footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/padding_5"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_10"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="All fields are mandatory*"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/padding_5"
+                android:elevation="2dp"
+                android:background = "@drawable/rectangle_curve_edges_white_style" >
+
+                <Spinner
+                    android:id = "@+id/spinner_appointment_for_who_diag"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_gravity = "center"
+                    android:dropDownSelector = "@color/colorPrimary"
+                    android:gravity = "center_vertical"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:paddingStart = "0dp"
+                    android:paddingEnd = "0dp"
+                    android:visibility = "visible" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:padding="@dimen/padding_5">
+                <EditText
+                    android:id="@+id/age_et"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_age"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:enabled="false"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--layout for - gender -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_gender" />
+
+                <TextView
+                    android:id="@+id/spinner_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:enabled="false"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:padding="@dimen/padding_5">
+                <EditText
+                    android:id="@+id/height_et"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_height_"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:padding="@dimen/padding_5">
+                <EditText
+                    android:id="@+id/weight_et"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_weight_"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:padding="@dimen/padding_5">
+                <EditText
+                    android:id="@+id/waistcircum_et"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_waist_circum"
+                    android:inputType="number"
+                    android:maxLength="3"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--layout for - bp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_bp" />
+
+                <TextView
+                    android:id="@+id/spinner_bp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/sysdias_ll">
+
+                <!--systolic-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:padding="@dimen/padding_5">
+                    <EditText
+                        android:id="@+id/systolic_et"
+                        style="@style/DrawableEditTextStyle"
+                        android:hint="@string/hint_sys"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--diastolic-->
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutStyle"
+                    android:padding="@dimen/padding_5">
+                    <EditText
+                        android:id="@+id/diastolic_et"
+                        style="@style/DrawableEditTextStyle"
+                        android:hint="@string/hint_dis"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+
+            <!--layout for - daibetes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_diabetes" />
+
+                <TextView
+                    android:id="@+id/spinner_diabetes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <!--layout for - high bp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_high_bp" />
+
+                <TextView
+                    android:id="@+id/spinner_highbp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <!--layout for - treatment for bp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_treatment_hypertension" />
+
+                <TextView
+                    android:id="@+id/spinner_treatmentbp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:padding="5dp"
+                    android:tag="0"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/hypertensiontreatment_ll">
+
+                <!--layout for - history of cardio vascular disease -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/place_holder"
+                        android:text="@string/hint_history_cardiovascular" />
+
+                    <TextView
+                        android:id="@+id/spinner_history_cardiovascular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:tag="0"
+                        android:drawableRight="@drawable/ic_down_arrow"
+                        android:backgroundTint="@color/colorAccent" />
+
+                    <View
+                        android:layout_height="1dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/myTextPrimaryColor" />
+                </LinearLayout>
+
+                <!--layout for - Atril fibrillation -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/place_holder"
+                        android:text="@string/hint_history_atrial_fibrillation" />
+
+                    <TextView
+                        android:id="@+id/spinner_atrial_fibrillation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:tag="0"
+                        android:drawableRight="@drawable/ic_down_arrow"
+                        android:backgroundTint="@color/colorAccent" />
+
+                    <View
+                        android:layout_height="1dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/myTextPrimaryColor" />
+                </LinearLayout>
+
+                <!--layout for - treatment for ventricular hypertrophy -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/place_holder"
+                        android:text="@string/hint_history_ventricular_hypertrophy" />
+
+                    <TextView
+                        android:id="@+id/spinner_ventricular_hypertrophy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:tag="0"
+                        android:drawableRight="@drawable/ic_down_arrow"
+                        android:backgroundTint="@color/colorAccent" />
+
+                    <View
+                        android:layout_height="1dp"
+                        android:layout_width="match_parent"
+                        android:background="@color/myTextPrimaryColor" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+            <!--layout for - parents diabetes -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_parent_diabetes" />
+
+                <TextView
+                    android:id="@+id/spinner_parent_diabetes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <!--layout for - parent bp -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_parent_bp" />
+
+                <TextView
+                    android:id="@+id/spinner_parentbp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <!--layout for - parent cardiac -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_parent_cardiac" />
+
+                <TextView
+                    android:id="@+id/spinner_parentcardiac"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:padding="5dp"
+                    android:tag="0"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <!--layout for - smoking -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_smoke" />
+
+                <TextView
+                    android:id="@+id/spinner_smoke"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:padding="@dimen/padding_5">
+                <EditText
+                    android:id="@+id/cigarettesperday_et"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_cigarettes_per_day"
+                    android:inputType="number"
+                    android:visibility="gone"
+                    android:maxLength="3"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--layout for - physical activity -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/place_holder"
+                    android:text="@string/hint_physical_activity" />
+
+                <TextView
+                    android:id="@+id/spinner_physicalactivity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:tag="0"
+                    android:drawableRight="@drawable/ic_down_arrow"
+                    android:backgroundTint="@color/colorAccent" />
+
+                <View
+                    android:layout_height="1dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/myTextPrimaryColor" />
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:padding="@dimen/padding_5">
+                <EditText
+                    android:id="@+id/caloriesinteake_et"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_calories"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:onClick="doCalculations"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:padding="@dimen/padding_10"
+            android:background="?attr/colorPrimary"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

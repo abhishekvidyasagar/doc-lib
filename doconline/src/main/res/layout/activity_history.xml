@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ParentLayoutStyle"
+    tools:context=".FitMeIn.HistoryActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Workouts"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_left_arrow"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:onClick="goBack"
+            android:padding="@dimen/padding_5"
+            android:layout_margin="@dimen/padding_5"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_boarder"
+        android:layout_below="@+id/header"
+        style="@style/AppBarLayoutStyle"
+        android:weightSum="3"
+        android:id="@+id/content_layout"
+        android:layout_margin="@dimen/padding_5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="UPCOMING"
+            android:id="@+id/upcoming_btn"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/padding_5"
+            android:background="?attr/colorPrimary"
+            android:textColor="@color/white"
+            android:padding="@dimen/padding_10"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="PREVIOUS"
+            android:id="@+id/previous_btn"
+            android:layout_margin="@dimen/padding_5"
+            android:layout_weight="1"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            android:padding="@dimen/padding_10"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="CANCELLED"
+            android:id="@+id/cancelled_btn"
+            android:layout_margin="@dimen/padding_5"
+            android:layout_weight="1"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            android:padding="@dimen/padding_10"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+
+   <!-- <android.support.v7.widget.RecyclerView
+        android:id="@+id/workouts_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/content_layout"
+        android:layout_above="@+id/footer"
+        android:nestedScrollingEnabled="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:background="@color/grey_background"
+        android:padding="5dp"></android.support.v7.widget.RecyclerView>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/content_layout"
+        android:layout_above="@+id/footer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:id="@+id/workout_list"
+            android:orientation="vertical"
+            android:background="@color/grey_background"
+            >
+        </LinearLayout>
+
+    </ScrollView>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Oops! \n No workouts/service available"
+        android:visibility="gone"
+        android:id="@+id/nodatalabel"
+        android:layout_below="@+id/content_layout"
+        android:layout_above="@+id/footer"
+        android:gravity="center"/>
+
+    <include layout="@layout/layout_loading" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey_background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Workouts  "
+                android:gravity="center"
+                android:padding="@dimen/padding_5"
+                android:onClick="goWorkoutsList"
+                android:drawableTop="@drawable/ic_list_grey"
+                android:textColor="#8C8181"
+                android:layout_weight="1"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Studios  "
+                android:gravity="center"
+                android:padding="@dimen/padding_5"
+                android:onClick="goStudios"
+                android:drawableTop="@drawable/ic_gym_grey"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_my_workouts_green"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"
+                android:layout_weight="1"
+                android:text="My Workouts"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

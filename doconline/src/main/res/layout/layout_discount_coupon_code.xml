@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_discount_coupon_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges = "true"
+    android:background = "@color/white"
+    android:fillViewport="true"
+    android:visibility="gone"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "match_parent"
+        android:padding="@dimen/padding_20" >
+
+        <LinearLayout
+            android:id = "@+id/top_container"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_above="@+id/bottom_layout"
+            android:orientation = "vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Apply Discount"
+                android:layout_marginBottom="@dimen/padding_20"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:text="Have a discount code to redeem ?"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextSecondaryColor"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                android:text="(Optional)"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/padding_20"
+                android:layout_marginBottom="@dimen/padding_5"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/edit_discount_coupon_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dp"
+                    android:maxLength="500"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:padding="@dimen/padding_5"
+                    android:imeOptions="actionDone"
+                    android:background="@drawable/rectangle_round_edges_grey_style"
+                    android:textColor="@color/myTextSecondaryColor"
+                    android:hint="Have a coupon code ?" />
+
+                <Button
+                    android:id="@+id/btnCouponApply"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="35dp"
+                    android:textSize="14sp"
+                    android:layout_marginStart="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/round_ui_button_style"
+                    android:text="Apply" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_coupon_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/light_green"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:visibility="invisible"
+                android:text="Coupon Applied Successfully"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_10"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="100dp"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="13sp"
+                    android:text="Plan"/>
+
+                <TextView
+                    android:id="@+id/tv_plan_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="DOCONLINE PLAN NAME"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding_10" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:text="Amount"/>
+
+                <TextView
+                    android:id="@+id/tv_plan_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="0.00"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding_10" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_red"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:text="Coupon Discount"/>
+
+                <TextView
+                    android:id="@+id/tv_plan_discount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/light_red"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="0.00"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding_10" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:text="To be Paid"/>
+
+                <TextView
+                    android:id="@+id/tv_plan_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="13sp"
+                    android:textStyle="normal"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="0.00"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:minWidth="70dp"
+            android:layout_alignParentBottom="true"
+            android:minHeight="?attr/actionBarSize" >
+
+            <Button
+                android:id="@+id/btnDecline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:layout_weight="1"
+
+                android:foreground="?attr/selectableItemBackground"
+                android:background="@color/light_red"
+                android:layout_marginEnd="5dp"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/btnProceedToPay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="50dp"
+                android:textSize="16sp"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:textColor="@android:color/white"
+                android:textAllCaps="false"
+                android:onClick="proceedToPay"
+                android:foreground="?attr/selectableItemBackground"
+                android:background="?attr/colorPrimary"
+                android:text="Proceed to Pay" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

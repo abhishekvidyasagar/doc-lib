@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageButton
+        android:id="@+id/minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_minus_grey"
+        android:tint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:paddingEnd="5dp"
+        android:paddingStart="5dp"
+        android:background="@null"/>
+
+    <TextView
+        android:id="@+id/required_medicine_packs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textSize="14sp"
+        android:layout_centerInParent="true"
+        android:layout_toEndOf="@+id/minus"
+        android:textColor="@color/myTextPrimaryColor"/>
+
+    <ImageButton
+        android:id="@+id/plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus_circle_outline"
+        android:tint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:layout_toEndOf="@+id/required_medicine_packs"
+        android:paddingStart="5dp"
+        android:paddingEnd="0dp"
+        android:background="@null"/>
+
+</RelativeLayout>

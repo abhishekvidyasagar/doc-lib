@@ -1,0 +1,25 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_height"
+        style="@style/TextInputLayoutStyle"
+        android:padding="4dp" >
+
+        <EditText
+            android:id="@+id/editField"
+            style="@style/EditTextStyle"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvUnit"
+        style="@style/PHRLabelStyle"
+        android:text="" />
+
+</FrameLayout>

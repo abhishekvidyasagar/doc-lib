@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    style="@style/AppBarLayoutStyle">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        <!--
+        android:background="?attr/colorPrimary"
+        -->
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            style="@style/ToolbarTitleLayoutStyle" />
+
+        <RelativeLayout
+            android:id="@+id/toolbar_doctor_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <com.doconline.doconline.helper.MarqueeTextView
+                android:id="@+id/tv_mci_pno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginEnd="32dp" />
+
+            <com.doconline.doconline.helper.MarqueeTextView
+                android:id="@+id/tv_qualification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_mci_pno"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginEnd="32dp" />
+
+            <ImageView
+                android:id="@+id/iv_doctor_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="5dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_info_white" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <include layout="@layout/progress_horizontal" />
+
+</com.google.android.material.appbar.AppBarLayout>

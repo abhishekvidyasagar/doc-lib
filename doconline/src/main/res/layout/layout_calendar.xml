@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:layout_marginBottom="5dp"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/current_month_year"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:maxLines="1"
+        android:textColor="@color/myTextPrimaryColor"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:text="Date &amp; Time"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btn_prev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:background="@drawable/no_border"
+            android:layout_gravity="center"
+            android:tint="?attr/colorPrimary"
+            android:contentDescription="@null"
+            android:layout_marginEnd="5dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_left_arrow" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendar_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_border"
+            android:layout_gravity="center"
+            android:tint="?attr/colorPrimary"
+            android:contentDescription="@null"
+            android:layout_marginStart="5dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:src="@drawable/ic_right_arrow" />
+
+    </LinearLayout>
+
+</LinearLayout>

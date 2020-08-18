@@ -1,0 +1,53 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        jcenter()
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.1'
+
+        classpath 'com.google.gms:google-services:4.3.2'
+        classpath 'io.sentry:sentry-android-gradle-plugin:1.7.28'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url  "http://tokbox.bintray.com/maven" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven { url "https://jitpack.io" }
+        jcenter()
+        google()
+
+    }
+}
+
+ext {
+    minSdkVersion = 21
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+    buildToolsVersion = '29.0.0'
+
+    supportLibraryGroup = 'com.android.support'
+    supportLibraryVersion = '29.0.0'
+
+    firebaseLibraryGroup = 'com.google.firebase'
+    googleLibraryGroup = 'com.google.android.gms'
+    playServiceVersion = '18.0.0'
+    firebaseVersion = '19.0.0'
+
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_list_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="0dp"
+    card_view:cardElevation="0dp"
+    android:foreground="?android:attr/selectableItemBackground" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="12dp" >
+
+        <TextView
+            android:id="@+id/orderIdText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_id"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="14sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00000000"
+            android:paddingStart="@dimen/padding_15"
+            android:paddingEnd="@dimen/padding_0"
+            android:textColor="@color/myTextPrimaryColor"
+            android:textSize="14sp"
+            android:layout_toEndOf="@+id/orderIdText"/>
+
+        <TextView
+            android:id="@+id/orderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:text="@string/order_date"
+            android:layout_below="@id/orderId"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="14sp"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            android:paddingStart="@dimen/padding_15"
+            android:paddingEnd="@dimen/padding_0"
+            android:layout_below="@+id/orderId"
+            android:layout_toEndOf="@id/orderDate"
+            android:text="25 Sept 2017"/>
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/orderId"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:text="0.00"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/padding_15"
+            android:layout_below="@+id/date"
+            android:background="@color/divider" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

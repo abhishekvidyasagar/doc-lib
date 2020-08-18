@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_first_name"
+        android:layout_marginTop="@dimen/padding_15"
+        style="@style/TextInputLayoutStyle" >
+
+        <EditText
+            android:id="@+id/editFirstName"
+            style="@style/DrawableEditTextStyle"
+            android:hint="@string/hint_first_name_compulsary"
+            android:maxLength="30"
+            android:inputType="text"
+            android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:drawableStart="@drawable/ic_icon_user" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_last_name"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/editLastName"
+            style="@style/DrawableEditTextStyle"
+            android:hint="@string/hint_last_name_compulsary"
+            android:maxLength="30"
+            android:inputType="text"
+            android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:drawableStart="@drawable/ic_icon_user" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_email"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/editEmail"
+            style="@style/DrawableEditTextStyle"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/ic_message" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_mobile_no"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="5dp" >
+
+            <EditText
+                android:id="@+id/editMobileNo"
+                style="@style/DrawableEditTextStyle"
+                android:maxLength="10"
+                android:hint="@string/hint_mobile_no"
+                android:maxLines="1"
+                android:inputType="phone"
+                android:digits="0123456789"
+                android:paddingEnd="72dp"
+                android:paddingStart="@dimen/padding_0"
+                android:drawableStart="@drawable/ic_icon_phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSendOTP"
+            style="@style/LinkButtonStyle"
+            android:layout_width="100dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="@dimen/padding_10"
+            android:gravity="end"
+            android:onClick="onClick"
+            android:paddingEnd="@dimen/padding_5"
+            android:paddingStart="@dimen/padding_0"
+            android:textColor="?attr/colorPrimary"
+            android:visibility="gone"
+            android:text="@string/button_resend_otp" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_otp_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:text="Enter OTP"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/padding_5" />
+
+    <LinearLayout
+        android:id="@+id/layout_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_margin="3dp"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/editFirstDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editSecondDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editThirdDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editFourthDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editFifthDigit"
+            style="@style/EditOTPTextStyle" />
+
+        <EditText
+            android:id="@+id/editSixthDigit"
+            style="@style/EditOTPTextStyle" />
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_password"
+        style="@style/TextInputLayoutStyle"
+        android:layout_marginTop="5dp" >
+
+        <EditText
+            android:id="@+id/editPassword"
+            style="@style/DrawableEditTextStyle"
+            android:hint="@string/hint_password_compulsary"
+            android:inputType="textPassword"
+            android:drawableStart="@drawable/ic_lock" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_confirm_password"
+            style="@style/TextInputLayoutStyle"
+            android:layout_marginTop="5dp" >
+
+            <EditText
+                android:id="@+id/editConfirmPassword"
+                style="@style/DrawableEditTextStyle"
+                android:hint="@string/hint_password_confirm_compulsary"
+                android:inputType="textPassword"
+                android:paddingEnd="0dp"
+                android:drawableStart="@drawable/ic_lock" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnTogglePassword"
+            style="@style/LinkButtonStyle"
+            android:layout_width="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="@dimen/padding_10"
+            android:gravity="end"
+            android:onClick="onClick"
+            android:paddingEnd="@dimen/padding_5"
+            android:paddingStart="@dimen/padding_0"
+            android:visibility="visible"
+            android:textColor="@color/myTextSecondaryColor"
+            android:text="Show" />
+
+    </FrameLayout>
+
+</LinearLayout>

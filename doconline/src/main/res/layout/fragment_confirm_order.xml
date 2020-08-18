@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ParentLayoutStyle"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".appointment.AppointmentSummeryActivity" >
+
+    <include
+        layout="@layout/layout_medicine_order_step" />
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/ParentLayoutStyle"
+        android:background="@color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_5" >
+
+            <include
+                layout="@layout/layout_shipping_address_review" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_15" />
+
+            <TextView
+                android:id="@+id/tv_sub_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Total"
+                android:gravity="end"
+                android:textSize="14sp"
+                android:padding="@dimen/padding_10"
+                android:textStyle="bold"
+                android:textColor="@color/myTextPrimaryColor" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medicines can be procured only by the Cash on Delivery (COD) option"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:padding="@dimen/padding_20"
+                android:textColor="@color/myTextSecondaryColor" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/button_next"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

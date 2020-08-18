@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fab_add_record"
+        android:icon="@drawable/ic_phone_white"
+        android:title="Add other Records" />
+
+    <item
+        android:id="@+id/fab_add_prescription"
+        android:icon="@drawable/ic_send_white"
+        android:title="Add Prescription" />
+
+</menu>

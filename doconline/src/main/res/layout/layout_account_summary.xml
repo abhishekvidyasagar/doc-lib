@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_marginStart="6dp"
+    android:layout_marginEnd="6dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id = "@+id/profile_image"
+        android:layout_width = "70dp"
+        android:layout_height = "70dp"
+        android:layout_gravity="center"
+        android:src = "@drawable/ic_avatar"
+        app:civ_border_color = "?attr/colorPrimary"
+        app:civ_border_width = "1dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/padding_10"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_10"
+        android:textStyle="bold"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="16sp"
+        android:maxLines="1"
+        android:layout_toStartOf="@id/profile_image"
+        android:gravity="center_vertical"
+        android:text="Hello" />
+
+    <LinearLayout
+        android:id="@+id/layout_subscription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/padding_10"
+        android:clickable="true"
+        android:layout_toStartOf="@id/profile_image"
+        android:layout_below="@id/user_name" >
+
+        <TextView
+            android:id="@+id/tv_subscription_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_subscription"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:text="Choose"
+            android:gravity="center"
+            android:padding="2dp"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/padding_5"
+            android:background="@drawable/round_edges_grey_button_style"
+            android:textColor="@color/myTextSecondaryColor"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:onClick="onClick"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

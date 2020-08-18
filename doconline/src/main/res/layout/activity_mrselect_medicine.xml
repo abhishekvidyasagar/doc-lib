@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    tools:context="com.doconline.doconline.medicalremainders.MRSelectMedicine">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/AppBarLayoutStyle"
+        android:layout_alignParentTop="true">
+        <include layout="@layout/toolbar_layout" />
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/action_bar_bg"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <SearchView
+                android:id="@+id/search_medicines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="textFilter"
+                android:gravity="center_vertical"
+                android:background="@drawable/rounded_corner_search"
+                android:closeIcon="@drawable/ic_close_grey"
+                android:searchIcon="@drawable/places_ic_search"
+                android:queryHint="Search Medicine" />
+
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/layout_loading" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/medicinelist"
+        android:layout_below="@id/app_bar"
+        android:layout_marginTop="0dp">
+
+    </ListView>
+</RelativeLayout>

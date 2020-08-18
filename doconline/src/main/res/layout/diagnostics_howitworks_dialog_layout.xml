@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/close_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_close_circle_black"
+        android:textColor="#9acd32" />
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginTop="6dp"-->
+    <!--android:layout_marginLeft="6dp"-->
+    <!--android:layout_marginRight="6dp"-->
+    <!--android:paddingBottom="20dp"-->
+    <!--android:background="@drawable/bg_dialog"-->
+    <!--android:gravity="center_horizontal"-->
+    <!--android:orientation="vertical"-->
+    <!--android:id="@+id/linearLayout">-->
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:padding="10dp"
+        android:text="How it works ?"
+        android:textAlignment="center"
+        android:textColor="#0a5361"
+        android:textSize="30sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@drawable/cast_expanded_controller_bg_gradient_light" />
+
+    <ListView
+        android:id="@+id/listViewInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent" />
+
+    <TextView
+        android:id="@+id/conclusion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:fontFamily="sans-serif"
+        android:gravity="fill_horizontal"
+        android:padding="10dp"
+        android:text="It's that simple"
+        android:textAlignment="center"
+        android:textColor="#d8dada"
+        android:textSize="36sp" />
+</LinearLayout>
+
+    <!-- Close -->
+
+
+<!--</LinearLayout>-->
+
+    <!--android:layout_alignEnd="@+id/linearLayout"-->
+    <!--android:layout_alignTop="@+id/linearLayout"-->

@@ -1,0 +1,462 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="55dp"
+    tools:context="com.doconline.doconline.diagnostics.DiagnosticsBookAppointmentFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView_PackageTile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgView_PackageIcon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/icon_diagnostics_lipid_profile"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_package_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Aarogyam 1.1"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/imgView_PackageIcon"
+                app:layout_constraintTop_toTopOf="@+id/imgView_PackageIcon" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:text="Offered by"
+                app:layout_constraintBottom_toBottomOf="@+id/imgView_PackageIcon"
+                app:layout_constraintStart_toStartOf="@+id/tv_package_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_package_name" />
+
+            <View
+                android:id="@+id/verticalSeparatorView"
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/divider"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintStart_toEndOf="@+id/textView3"
+                app:layout_constraintTop_toTopOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.789" />
+
+            <ImageView
+                android:id="@+id/imgView_partnerLogo"
+                android:layout_width="120dp"
+                android:layout_height="26dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/verticalSeparatorView"
+                app:layout_constraintTop_toTopOf="@+id/textView3"
+                app:layout_constraintVertical_bias="0.63"
+                app:srcCompat="@drawable/thyrocare_logo"
+                tools:ignore="ContentDescription" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tv_static_text_choose_address"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="Choose address for booking an appointment"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/cardView_PackageTile"
+        app:layout_constraintTop_toBottomOf="@+id/cardView_PackageTile" />
+
+
+    <!--<Spinner-->
+        <!--android:id="@+id/spinner_choose_address"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:background="@drawable/round_ui_button_style"-->
+        <!--android:checkMark="?android:attr/listChoiceIndicatorSingle"-->
+        <!--android:contextClickable="true"-->
+        <!--android:divider="@drawable/spinner_item_border"-->
+        <!--android:dropDownWidth="match_parent"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:prompt="@string/choose_address"-->
+        <!--android:spinnerMode="dialog"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/tv_static_text_choose_address"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/cardView_PackageTile"-->
+        <!--app:layout_constraintHorizontal_bias="0.75"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/tv_static_text_choose_address"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/tv_static_text_choose_address"-->
+
+        <!--/>-->
+
+    <Button
+    android:id="@+id/btn_choose_address"
+    android:layout_width="wrap_content"
+    android:layout_height="30dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginStart="24dp"
+    android:background="@drawable/round_ui_button_style"
+    android:foreground="?attr/selectableItemBackground"
+    android:text="CHOOSE"
+    android:textColor="@android:color/white"
+    app:layout_constraintBottom_toBottomOf="@+id/tv_static_text_choose_address"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toEndOf="@+id/tv_static_text_choose_address"
+    app:layout_constraintTop_toTopOf="@+id/tv_static_text_choose_address" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_static_text_choose_address"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/container_AddressForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:orientation="horizontal"
+                android:elevation="2dp"
+                android:background = "@drawable/rectangle_curve_edges_white_style" >
+
+                <Spinner
+                    android:id = "@+id/spinner_appointment_for_who_diag"
+                    android:layout_width = "match_parent"
+                    android:layout_height = "wrap_content"
+                    android:layout_gravity = "center"
+                    android:dropDownSelector = "?attr/colorPrimary"
+                    android:gravity = "center_vertical"
+                    android:backgroundTint="?attr/colorPrimary"
+                    android:paddingStart = "0dp"
+                    android:paddingEnd = "0dp"
+                    android:visibility = "visible" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_username"
+                style="@style/TextInputLayoutStyle"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_UserName"
+                    style="@style/DrawableEditTextStyle"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_user_icon"
+                    android:hint="@string/hint_user_Name"
+                    android:inputType="textCapWords|textCapSentences"
+                    android:maxLength="100"
+                    android:maxLines="1"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_email"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_username">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_UserEmail"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_mail_icon"
+                    android:hint="@string/hint_email"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_Mobile"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_email">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_UserMobile"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:drawableStart="@drawable/ic_icon_phone"
+                    android:hint="@string/hint_user_address_Mobile_Number"
+                    android:maxLength="10"
+                    android:visibility="visible" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_Addresslane1"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_Mobile">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_UserAddress1"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_icon_user_address"
+                    android:hint="@string/hint_user_address_lane"
+                    android:inputType="text"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_Addresslane2"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_Addresslane1">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_UserAddress2"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_icon_user_address"
+                    android:hint="@string/hint_user_address_landmark"
+                    android:inputType="textCapWords|textCapSentences"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_City"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_Addresslane2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_City"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_icon_city"
+                    android:hint="@string/hint_user_address_city"
+                    android:inputType="textCapWords|textCapSentences"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_State"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_State"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits=" abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                    android:drawableStart="@drawable/ic_icon_state"
+                    android:hint="@string/hint_user_address_state"
+                    android:inputType="textCapWords|textCapSentences"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!-- ic_check_icon -->
+            <!-- ic_delete -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_bookappointment_Pincode"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_State">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_Pincode"
+                    style="@style/DrawableEditTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789"
+                    android:drawableEnd="@android:drawable/ic_delete"
+                    android:drawableStart="@drawable/ic_icon_pincode"
+                    android:hint="@string/hint_user_address_pincode"
+                    android:maxLength="100"
+                    android:visibility="visible" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_diagnostcs_bookappointment_selectDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="12dp"
+                android:gravity="center_vertical"
+                android:hint="Select Date &amp; Time"
+                android:textAllCaps="true"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_bookappointment_Pincode" />
+
+            <TextView
+                android:id="@+id/txtView_Date"
+                android:layout_width="185dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="12dp"
+                android:drawableStart="@drawable/ic_icon_calender"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_date"
+                android:textAllCaps="true"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_diagnostcs_bookappointment_selectDate" />
+
+            <TextView
+                android:id="@+id/txtView_Time"
+                android:layout_width="186dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="12dp"
+                android:drawableStart="@drawable/ic_time_icon"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_time"
+                android:textAllCaps="true"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txtView_Date"
+                app:layout_constraintTop_toBottomOf="@+id/tv_diagnostcs_bookappointment_selectDate" />
+
+            <View
+                android:id="@+id/view_Underline"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/date"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/underline"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtView_Date" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkBox_PrintOutRequired"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/accept_call"
+                android:text="I need a print out of the diagnostics reports"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_Underline" />
+
+            <View
+                android:id="@+id/view_empty"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@+id/checkBox_PrintOutRequired"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/transparent_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox_PrintOutRequired" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

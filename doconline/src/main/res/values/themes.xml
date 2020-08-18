@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.App.DocOnline" parent="MyTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonBackground">@color/colorPrimary</item>
+        <item name="bannerBackground">@drawable/banner_image</item>
+        <item name="logoMain">@drawable/logo</item>
+    </style>
+
+    <style name="Theme.App.BetterPlace" parent="MyTheme">
+        <item name="colorPrimary">@color/betterPlacePrimaryColor</item>
+        <item name="colorPrimaryDark">@color/betterPlacePrimaryDarkColor</item>
+        <item name="colorAccent">@color/betterplaceAccentColor</item>
+        <item name="buttonBackground">@color/betterPlacePrimaryColor</item>
+        <item name="bannerBackground">@drawable/ic_banner</item>
+        <item name="logoMain">@drawable/betterplac_logo</item>
+    </style>
+
+    <style name="Theme.App.Tata" parent="MyTheme">
+        <item name="colorPrimary">@color/tataPrimaryColor</item>
+        <item name="colorPrimaryDark">@color/tataPrimaryDarkColor</item>
+        <item name="colorAccent">@color/tataAccentColor</item>
+        <item name="buttonBackground">@color/tataPrimaryColor</item>
+        <item name="bannerBackground">@drawable/ic_banner_tata</item><!--need to change these two lines-->
+        <item name="logoMain">@drawable/ic_tata_logo</item>
+    </style>
+</resources>

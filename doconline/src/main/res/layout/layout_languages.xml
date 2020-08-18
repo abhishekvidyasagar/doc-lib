@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_preferred_language"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background = "@drawable/rectangle_curve_edges_white_style"
+    android:visibility="visible"
+    android:orientation="vertical" >
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_label_pref_language"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/text_dim_grey"
+            android:text = "Preferred Languages :" />
+
+        <ImageButton
+            android:id="@+id/ib_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:tint="@color/colorAccent"
+            android:background="@drawable/no_border"
+            android:visibility="gone"
+            android:src="@drawable/ic_pencil_grey" />
+
+        <!--
+        <TextView
+            android:id="@+id/tv_add_language"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:gravity="end|center"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textColor="@color/myAccentColor"
+            android:src="@drawaic_pencil_grey24dp"
+            android:drawableTint="@color/myAccentColor"
+            android:text=" " />
+         -->
+
+        <RadioGroup
+            android:id="@+id/radio_preferred_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/preferred_language_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:checked="true"
+                android:text="No"/>
+
+            <RadioButton
+                android:id="@+id/preferred_language_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="100dp"
+                android:text="Yes"/>
+
+        </RadioGroup>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_allow_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/MySwitch"
+            android:gravity="end|center"
+            android:checked="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_selected_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_dim_grey"
+            android:text = "Your preferred language is " />
+
+        <TextView
+            android:id = "@+id/tv_selected_language"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:gravity = "start"
+            android:layout_marginStart="@dimen/padding_5"
+            android:text = "English"
+            android:textColor = "?attr/colorPrimary"
+            android:textSize = "14sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/language_list"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+</LinearLayout>

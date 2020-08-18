@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    style="@style/AppBarLayoutStyle" >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        <!--
+        android:background="?attr/colorPrimary"
+        -->
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:drawableEnd="@drawable/ic_arrow_down_white"
+            android:onClick="onClick"
+            android:clickable="true"
+            style="@style/ToolbarTitleLayoutStyle" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include layout="@layout/progress_horizontal" />
+
+</com.google.android.material.appbar.AppBarLayout>

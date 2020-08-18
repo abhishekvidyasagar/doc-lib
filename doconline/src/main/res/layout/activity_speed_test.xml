@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    style="@style/ParentLayoutStyle"
+    android:background="@color/white"
+    tools:context=".profile.SpeedTestActivity">
+
+    <include layout="@layout/appbar_layout" />
+
+    <TextView
+        android:id="@+id/txtView_bmi_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Bandwidth : 0 kbps"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        android:textStyle="bold" />
+
+    <com.cardiomood.android.controls.gauge.SpeedometerGauge
+        android:id="@+id/speedMeterGauge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/padding_10"
+        android:background="@android:color/white"
+        android:layout_marginTop="10dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="?attr/colorPrimary"
+        android:foreground="?attr/selectableItemBackground"
+        android:minHeight="50dp"
+        android:text="Check Now"
+        android:onClick="calculateSpeed"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="15sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:padding="10dp"
+        android:id="@+id/status_layout">
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/status_icon"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/status_tv"
+            android:visibility="visible"
+            android:padding="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="Please fill in all the fields below"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_address_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp">
+
+            <EditText
+                android:id="@+id/editAddressTitle"
+                style="@style/DrawableEditTextStyle"
+                android:hint="Address title"
+                android:inputType="textCapWords|textCapSentences"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_addresslane"
+            style="@style/TextInputLayoutStyle"
+            android:layout_margin="4dp">
+
+            <EditText
+                android:id="@+id/editAddressLane"
+                style="@style/DrawableEditTextStyle"
+                android:drawableStart="@drawable/ic_icon_user_address"
+                android:hint="@string/hint_user_address_lane"
+                android:inputType="textCapWords|textCapSentences"
+                android:maxLength="100"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_address_landmark"
+            style="@style/TextInputLayoutStyle"
+            android:layout_margin="4dp">
+
+            <EditText
+                android:id="@+id/editLandmark"
+                style="@style/DrawableEditTextStyle"
+                android:drawableStart="@drawable/ic_icon_user_address"
+                android:hint="@string/hint_user_address_landmark"
+                android:inputType="text"
+                android:maxLength="100"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_address_city"
+            style="@style/TextInputLayoutStyle"
+            android:layout_margin="4dp">
+
+            <EditText
+                android:id="@+id/editCity"
+                style="@style/DrawableEditTextStyle"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:drawableStart="@drawable/ic_icon_city"
+                android:hint="@string/hint_user_address_city"
+                android:inputType="text"
+                android:maxLength="25"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_address_pincode"
+            style="@style/TextInputLayoutStyle"
+            android:layout_margin="4dp">
+
+            <EditText
+                android:id="@+id/editPincode"
+                style="@style/DrawableEditTextStyle"
+                android:digits="0123456789"
+                android:drawableStart="@drawable/ic_icon_pincode"
+                android:hint="@string/hint_user_address_pincode"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_user_address_state"
+            style="@style/TextInputLayoutStyle"
+            android:layout_margin="4dp">
+
+            <EditText
+                android:id="@+id/editState"
+                style="@style/DrawableEditTextStyle"
+                android:drawableStart="@drawable/ic_icon_state"
+                android:hint="@string/hint_user_address_state"
+                android:inputType="text"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ "
+                android:maxLength="20"
+                android:maxLines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/appCompatCheckBox_isDefaultAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"/>
+
+            <TextView
+                android:id="@+id/tv_user_address_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="Use this address as default"
+                android:textColor="?attr/colorPrimary"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2">
+
+
+            <Button
+                android:id="@+id/btn_clear_user_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/color6"
+                android:drawableEnd="@drawable/ic_arrow_right_white"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="CLEAR"
+                android:textColor="@android:color/white"
+                />
+            <Button
+                android:id="@+id/btn_save_user_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_ui_button_style"
+                android:drawableEnd="@drawable/ic_arrow_right_white"
+                android:foreground="?attr/selectableItemBackground"
+                android:text="SAVE"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

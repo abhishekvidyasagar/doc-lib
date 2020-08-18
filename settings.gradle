@@ -1,0 +1,2 @@
+include ':app', ':doconline'
+rootProject.name='Trail12'

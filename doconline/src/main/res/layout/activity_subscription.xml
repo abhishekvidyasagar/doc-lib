@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    tools:context="com.doconline.doconline.subscription.SubscriptionActivity" >
+
+    <include layout="@layout/appbar_layout" />
+
+    <com.doconline.doconline.helper.MyViewPager
+        android:id="@+id/pager"
+        style="@style/PageControllerStyle"
+        app:layout_collapseMode="parallax"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <include layout="@layout/layout_discount_coupon_code" />
+    <include layout="@layout/layout_loading" />
+    <include layout="@layout/layout_block_ui" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ParentLayoutStyle"
+    tools:context=".FitMeIn.StudiosListActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Studios List"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_left_arrow"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:onClick="goBack"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_5"
+            android:layout_margin="@dimen/padding_5"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/header"
+        android:id="@+id/calendar_layout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="80dp"
+            android:background="?attr/colorPrimary"
+            />
+
+        <TextView
+            android:id="@+id/location_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:onClick="goBack"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_5"
+            android:layout_margin="@dimen/padding_5"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/calendar_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/grey_background"
+            android:id="@+id/studios_list"
+            android:gravity="center"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Oops! \n No workouts/service available"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:id="@+id/nodatalabel"
+        android:layout_below="@+id/calendar_layout"
+        android:layout_above="@+id/footer"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/grey_background"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Workouts  "
+                android:gravity="center"
+                android:onClick="goWorkoutsList"
+                android:padding="@dimen/padding_5"
+                android:drawableTop="@drawable/ic_list_grey"
+                android:textStyle="bold"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Studios  "
+                android:gravity="center"
+                android:padding="@dimen/padding_5"
+                android:textColor="?attr/colorPrimary"
+                android:drawableTop="@drawable/ic_gym"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_my_workouts_grey"
+                android:gravity="center"
+                android:onClick="goHistory"
+                android:textColor="#8C8181"
+                android:text="My Workouts"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl_search"
+        android:background="#CC000000"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            style="@style/MaterialSearchBarLight"
+            app:mt_speechMode="true"
+            app:mt_hint="Search Location"
+            app:mt_maxSuggestionsCount="100"
+            android:padding="@dimen/padding_10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/searchBar" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_loading" />
+
+</RelativeLayout>

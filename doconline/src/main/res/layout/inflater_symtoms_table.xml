@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/symptoms_layout"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/caption_background">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="Symptom"
+            android:padding="@dimen/padding_5"
+            android:layout_margin="0.5dp"
+            android:layout_alignParentStart="true"
+            android:lines="2"
+            android:layout_toLeftOf="@+id/med"
+            android:id="@+id/tv_symptoms"
+            android:gravity="center"
+            android:textColor="#000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/med"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Severity"
+            android:layout_toRightOf="@+id/med"
+            android:padding="@dimen/padding_5"
+            android:lines="2"
+            android:layout_alignParentEnd="true"
+            android:background="#ffffff"
+            android:layout_margin="0.5dp"
+            android:id="@+id/tv_symptoms_severity"
+            android:gravity="center"
+            android:textColor="#000"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_proceed_payment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:minHeight="50dp"
+    android:layout_gravity="bottom" >
+
+    <Button
+        android:id="@+id/btnBookDiag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="50dp"
+        android:textSize="15sp"
+        android:layout_weight="1"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        android:visibility="gone"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="?attr/colorPrimary"
+        android:text="Book Diagnostics"
+        android:layout_marginRight="5dp"/>
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="50dp"
+        android:layout_weight="1"
+        android:textSize="15sp"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:onClick="onClick"
+        android:foreground="?attr/selectableItemBackground"
+        android:background="?attr/colorPrimary"
+        android:text="TEXT HERE" />
+
+</LinearLayout>

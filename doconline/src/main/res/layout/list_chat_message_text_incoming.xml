@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/layout1"
+    android:orientation="horizontal"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="@dimen/padding_50"
+    android:layout_marginBottom="@dimen/padding_5"
+    android:layout_marginTop="@dimen/padding_5" >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/doctor_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:clickable="true"
+        app:civ_border_color = "?attr/colorPrimary"
+        app:civ_border_width = "0dp"
+        android:src = "@drawable/doctor"
+        android:visibility="gone"/>
+
+    <!--
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:src="@drawable/doctor" />
+    -->
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="-20dp"
+        android:layout_toEndOf="@id/doctor_image"
+        android:src="@drawable/arrow_bg2" />
+
+    <TextView
+        android:id="@+id/singleMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:textSize="13sp"
+        android:background="@drawable/message_incoming"
+        android:padding="12dp"
+        android:layout_marginTop="1dp"
+        android:text="Android charting."
+        android:layout_toEndOf="@+id/imageView1"
+        android:textColor="@color/myTextPrimaryColor" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="2:03 AM"
+        android:layout_below="@id/singleMessage"
+        android:paddingEnd="0dp"
+        android:paddingStart="65dp"
+        android:textColor="@color/place_holder" />
+
+</RelativeLayout>

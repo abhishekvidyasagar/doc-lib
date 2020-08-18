@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_empty"
+    android:gravity="center"
+    android:visibility="visible"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ic_timer_off"
+        android:background="@drawable/no_border"
+        android:tint="@color/empty_view"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/empty_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextSecondaryColor"
+        android:textSize="14sp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="No Slot Available" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    tools:context="com.doconline.doconline.diagnostics.DiagnosticsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        style="@style/AppBarLayoutStyle"
+        android:layout_alignParentTop="true">
+        <include layout="@layout/toolbar_layout" />
+
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/action_bar_bg"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:weightSum="2">
+
+            <SearchView
+                android:id="@+id/search_diagnostics"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1.75"
+                android:background="@drawable/rounded_corner_search"
+                android:closeIcon="@drawable/ic_close_grey"
+                android:searchIcon="@drawable/places_ic_search"
+                android:queryHint="Search" />
+
+            <ImageButton
+                android:id="@+id/imgBtn_HowItWorks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="0.25"
+                android:background="@color/transparent_color"
+                android:src="@drawable/ic_diagnostics_infor" />
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_bar"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.doconline.doconline.helper.MyViewPager
+            android:id="@+id/pager_Diagnostics"
+            style="@style/PageControllerStyle"
+            android:layout_marginBottom="55dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_collapseMode="parallax" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_diagnostics_terms_and_conditions" />
+    <include layout="@layout/layout_loading" />
+
+    <include layout="@layout/layout_diagnostics_footer"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

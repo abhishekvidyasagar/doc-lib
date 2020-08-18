@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:background="?attr/bannerBackground"
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="50dp"
+        android:contentDescription="@null"
+        android:background="@drawable/no_border"
+        android:src="?attr/logoMain"/>
+
+    <TextView
+        android:id="@+id/tv_customer_care_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_gravity="bottom|center"
+        android:padding="@dimen/padding_5"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#00000000"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="call"
+        android:drawableStart="@drawable/ic_phone_white"
+        android:text="@string/customer_care_number" />
+
+</FrameLayout>

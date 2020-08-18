@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.doconline.doconline.helper.GifImageView
+        android:id="@+id/success_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat = "@drawable/mail"
+        android:contentDescription="@null" />
+
+    <!--
+    <ImageView
+        android:id="@+id/success_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat = "@drawable/email_variant"
+        android:tint="@color/myAccentColor"
+        android:contentDescription="@null" />
+    -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:text="Check your email" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:padding="@dimen/padding_25"
+        android:text="We have sent you an email with instructions on how to reset your password." />
+
+    <Button
+        android:id="@+id/btnExistingUser"
+        style="@style/LinkButtonStyle"
+        android:onClick="onClick"
+        android:layout_gravity="center"
+        android:text="@string/button_login" />
+
+</LinearLayout>

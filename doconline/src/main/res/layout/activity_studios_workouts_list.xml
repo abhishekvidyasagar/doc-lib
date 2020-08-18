@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ParentLayoutStyle"
+    android:orientation="vertical"
+    tools:context=".FitMeIn.StudiosWorkoutsList">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/header">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/ic_left_arrow"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:onClick="goBack"
+            android:gravity="center_vertical"
+            android:padding="@dimen/padding_5"
+            android:layout_margin="@dimen/padding_5"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Studio Name"
+            android:textStyle="bold"
+            android:id="@+id/studioname_tv"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:id="@+id/content_layout">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="80dp"
+            android:background="?attr/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Month Year"
+            android:padding="5dp"
+            android:id="@+id/monthandyear"
+            android:gravity="center"/>
+
+        <HorizontalScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_gravity="center">
+            <LinearLayout
+                android:id="@+id/dateslist_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="5dp"
+            android:background="?attr/colorPrimary"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Studio Address Studio Address Studio Address
+        Studio Address Studio Address Studio Address"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:padding="@dimen/padding_5"
+            android:id="@+id/studioaddress_tv"
+            android:drawableLeft="@drawable/ic_location"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/workout_list"
+            android:orientation="vertical"></LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_loading" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/no_workouts_ll">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="Sorry !!! \n No workouts available"/>
+    </LinearLayout>
+
+</LinearLayout>

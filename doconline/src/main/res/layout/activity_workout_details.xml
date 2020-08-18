@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/ParentLayoutStyle"
+    android:fitsSystemWindows="true"
+    tools:context=".FitMeIn.WorkoutDetailsActivity">
+
+    <include layout="@layout/layout_loading" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_btns"
+        android:id="@+id/scroll_layout"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_layout"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:id="@+id/image_view_details"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@drawable/ic_arrow_back"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:onClick="goBack"
+                    android:padding="@dimen/padding_5"
+                    android:layout_margin="@dimen/padding_5"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="outlet name"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:id="@+id/outlet_name"
+                android:padding="@dimen/padding_5"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:paddingLeft="@dimen/padding_5"
+                android:gravity="center"
+                android:id="@+id/workout_name"
+                android:text="workoutname"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/bookingid_tv"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:gravity="center_vertical"
+                android:id="@+id/location"
+                android:paddingLeft="@dimen/padding_5"
+                android:drawableLeft="@drawable/ic_location"
+                android:text="Location"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:drawableLeft="@drawable/ic_calendar"
+                android:id="@+id/time"
+                android:text="time"
+                android:paddingLeft="@dimen/padding_5"
+                android:gravity="center_vertical"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:id="@+id/location_maps"
+                android:text=" Get Directions"
+                android:onClick="getDirections"
+                android:paddingLeft="@dimen/padding_5"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/ic_map"
+                android:textColor="@color/com_facebook_blue"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_5"
+                    android:drawableLeft="@drawable/ic_timer_icon"
+                    android:id="@+id/approxtime_tv"
+                    android:onClick="approxTime"
+                    android:text=" Schedule your slot "
+                    android:paddingLeft="@dimen/padding_5"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/com_facebook_blue"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_5"
+                android:drawableLeft="@drawable/ic_arrow"
+                android:id="@+id/seatscount_tv"
+                android:text="No of slots available"
+                android:paddingLeft="@dimen/padding_5"
+                android:gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/imp_layout"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/grey_background">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_5"
+                    android:text="Important Info*"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_5"
+                    android:text="description"
+                    android:id="@+id/description"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView android:text=""
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:id="@+id/barcodetext"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/footer_btns"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book"
+            android:id="@+id/btn_book"
+            android:gravity="center"
+            android:onClick="bookWorkout"
+            android:visibility="gone"
+            android:padding="@dimen/padding_10"
+            android:background="?attr/colorPrimary"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/scanqr_btn"
+            android:background="@drawable/qrr"
+            android:onClick="scanQRCode"
+            android:layout_margin="@dimen/padding_10"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/scanqr_btn"
+            android:padding="@dimen/padding_5"
+            android:gravity="center"
+            android:id="@+id/scanqr_tv"
+            android:text="Please scan QR Code at studio to mark attendance"
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="  Cancel  "
+        android:id="@+id/btn_cancel"
+        android:gravity="center"
+        android:onClick="cancelWorkout"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/padding_5"
+        android:padding="@dimen/padding_10"
+        android:background="@color/red"
+        android:textColor="@color/white"
+        android:textStyle="bold"/>
+
+
+
+</RelativeLayout>

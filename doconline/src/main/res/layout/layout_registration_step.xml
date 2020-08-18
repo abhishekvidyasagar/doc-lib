@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tv_step_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="12sp"
+        android:drawableTop="@drawable/ic_uncheck_icon"
+        android:drawablePadding="5dp"
+        android:text="@string/text_your_details" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_line_icon"
+        android:contentDescription="@null" />
+
+    <!--
+    <View
+        android:id="@+id/view_step_one"
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:visibility="visible"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/padding_10"
+        android:background="@color/myTextSecondaryColor" />
+    -->
+
+    <TextView
+        android:id="@+id/tv_step_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="12sp"
+        android:drawableTop="@drawable/ic_uncheck_icon"
+        android:drawablePadding="5dp"
+        android:text="@string/text_email_confirmation" />
+
+</LinearLayout>

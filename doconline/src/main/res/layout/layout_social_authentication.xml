@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/FrameLayoutFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/facebook_sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/facebook_sign_in"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/FacebookButtonStyle" />
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="15dp"
+            android:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/FrameLayoutGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_weight="1" >
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/google_sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/google_sign_in"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                style="@style/GooglePlusButtonStyle" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:visibility="visible"
+            android:background="@color/myTextSecondaryColor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_or"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:gravity="center"
+            android:textColor="@color/myTextSecondaryColor" />
+
+        <View
+            android:layout_width="50dp"
+            android:layout_height="1dp"
+            android:visibility="visible"
+            android:background="@color/myTextSecondaryColor" />
+
+    </LinearLayout>
+
+</LinearLayout>

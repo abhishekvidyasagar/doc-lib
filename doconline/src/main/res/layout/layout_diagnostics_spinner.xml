@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/layout_spinner">
+
+    <ImageView
+        android:id="@+id/imgView_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_close_circle_black"/>
+
+    <TextView
+        android:id="@+id/textChoose"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:text="Choose Address"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textLine"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text=""
+        android:foreground="@color/background_color_light_grey"
+        android:textAlignment="center"
+        android:layout_below= "@+id/textChoose"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_margin="4dp"
+        android:padding="2dp"
+        android:layout_below= "@+id/textLine">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below= "@+id/recyclerView_spinner"
+
+        >
+
+      <Button
+          android:id="@+id/buttonOk"
+          android:layout_width="0dp"
+          android:layout_height="35dp"
+          android:layout_weight=".50"
+          android:text="OK"
+          android:textColor="@android:color/white"
+          android:foreground="?attr/selectableItemBackground"
+          android:background="@drawable/round_ui_button_style"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="5dp"
+          android:layout_marginBottom="5dp"
+          />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight=".50"
+            android:text="Cancel"
+            android:textColor="@android:color/white"
+            android:background="@drawable/color6"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

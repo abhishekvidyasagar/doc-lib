@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_terms_and_condition"
+    android:background="@color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="@dimen/padding_10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextPrimaryColor"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:text="GENERAL CONSENT FOR TELEMEDICINE SERVICES"/>
+
+        <LinearLayout
+            android:id="@+id/layout_consent_patient_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:text="PATIENT NAME: "/>
+
+            <TextView
+                android:id="@+id/tv_patient_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_consent_attendant_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:text="PATIENT ATTENDANT NAME: "/>
+
+            <TextView
+                android:id="@+id/tv_patient_attendant_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_consent_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:text="AGE OF THE PATIENT: "/>
+
+            <TextView
+                android:id="@+id/tv_patient_age"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text=""/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_consent_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:text="DATE CONSENT: "/>
+
+            <TextView
+                android:id="@+id/tv_date_of_consultation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="XXX X, XXXX"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_booking_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:text="CONSULTATION DATE: "/>
+
+            <TextView
+                android:id="@+id/tv_consultation_date_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="XXX X, XXXX"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_consent_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:text="PHONE NUMBER: "/>
+
+            <TextView
+                android:id="@+id/tv_phone_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="XXXXXXXXXX" />
+
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <!--
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextPrimaryColor"
+            android:gravity="start"
+            android:textSize="13sp"
+            android:paddingTop="20dp"
+            android:paddingBottom="10dp"
+            android:textStyle="bold"
+            android:text="Introduction"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextSecondaryColor"
+            android:gravity="start"
+            android:textSize="13sp"
+            android:paddingBottom="10dp"
+            android:text="DocOnline Health India Private Limited (DocOnline) is a technology-powered Healthcare Provider enabling delivery of the primary healthcare services utilizing its virtual platform (Telemedicine Platform). It provides physical consultation as well as online telemedicine consultation. Please visit the website www.doconline.com(Website) for complete details regarding of the any Services"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/myTextPrimaryColor"
+            android:gravity="start"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="The Services offered through Telemedicine Platform are subject to the following terms ana conditions."/>
+        -->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:minWidth="70dp"
+        android:layout_marginBottom="@dimen/padding_15"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="#727272"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="10dp"
+            android:text="Decline" />
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:visibility="gone"
+            android:layout_marginEnd="10dp"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="?attr/colorPrimary"
+            android:text="I Accept" />
+
+    </LinearLayout>
+
+</RelativeLayout>

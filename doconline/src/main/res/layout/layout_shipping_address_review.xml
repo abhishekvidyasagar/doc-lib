@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/address_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Pincode:"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/pincode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="000000"
+                    android:gravity="start"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/myTextSecondaryColor" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Address Line 1:"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/address_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="cdksmckkcmkmscmksmmcmskmckmskmckmskmakcm"
+                android:gravity="start"
+                android:textSize="12sp"
+                android:textColor="@color/myTextSecondaryColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="@string/date"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2nd Jan 2016"
+                    android:gravity="start"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/myTextSecondaryColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/mobile_text"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Mobile:"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/mobile_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:minWidth="120dp"
+                    android:text="0000000000"
+                    android:gravity="start"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+                    android:textColor="@color/myTextSecondaryColor" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:text="Address Line 2:"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/address_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cdksmckkcmkmscmksmmcmskmckmskmckmskmakcm"
+        android:gravity="start"
+        android:textSize="12sp"
+        android:textColor="@color/myTextSecondaryColor" />
+
+</LinearLayout>

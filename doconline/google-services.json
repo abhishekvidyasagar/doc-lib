@@ -1,0 +1,75 @@
+{
+  "project_info": {
+    "project_number": "706829133527",
+    "firebase_url": "https://doconline-cb.firebaseio.com",
+    "project_id": "doconline-cb",
+    "storage_bucket": "doconline-cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:706829133527:android:b24113211d6dc588",
+        "android_client_info": {
+          "package_name": "com.doconline.doconline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "706829133527-da0vrrqhd4puaqapq86rgsiccum4o4op.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doconline.doconline",
+            "certificate_hash": "87da48254f0249892bb39eee5d9a1f58e9f4678d"
+          }
+        },
+        {
+          "client_id": "706829133527-kda31dikvg2ojkb773862lpf15oo0uen.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.doconline.doconline",
+            "certificate_hash": "6aca4d9ba1255310d96621523d500f921a098978"
+          }
+        },
+        {
+          "client_id": "706829133527-cqsl8tadu7v7tp558kp6fpf0e6uhjbri.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "706829133527-tsmle46cuvcvoicpjohhc0l6ldue0tpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUDG-dIOE-rFItp4sv6eTQYUGS3gcrIP4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "706829133527-6dor4qoredb8n649s9qcl3cpp63cc74e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.doconline.doconline",
+                "app_store_id": "1234520016"
+              }
+            },
+            {
+              "client_id": "706829133527-cqsl8tadu7v7tp558kp6fpf0e6uhjbri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

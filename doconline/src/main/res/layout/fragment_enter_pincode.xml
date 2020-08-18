@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ParentLayoutStyle"
+    android:orientation="vertical"
+    tools:context=".appointment.AppointmentSummeryActivity" >
+
+    <include layout="@layout/layout_medicine_order_step" />
+
+    <androidx.core.widget.NestedScrollView
+        style="@style/ParentLayoutStyle"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_20" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/medication_delivery"
+                android:textColor="@color/myTextPrimaryColor"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="where the medicine should be delivered."
+                android:padding="8dp"
+                android:textColor="@color/myTextSecondaryColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Minimum order Rs. 200/-"
+                android:padding="3dp"
+                android:textColor="@color/myTextSecondaryColor"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Payment Method: COD only."
+                android:textColor="@color/myTextSecondaryColor"
+                android:textSize="14sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_pincode"
+                style="@style/TextInputLayoutStyle"
+                android:layout_marginTop="12dp" >
+
+                <EditText
+                    android:id="@+id/editPincode"
+                    style="@style/DrawableEditTextStyle"
+                    android:hint="@string/hint_enter_pincode"
+                    android:maxLength="6"
+                    android:inputType="number"
+                    android:digits="0123456789"
+                    android:drawableStart="@drawable/ic_location" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/button_next"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="30dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

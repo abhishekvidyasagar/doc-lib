@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android = "http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior = "single">
+
+        <group
+            android:id = "@+id/menuChat"
+            android:checkableBehavior = "single">
+
+            <item
+                android:id = "@+id/nav_my_appointments"
+                android:icon = "@drawable/appointment"
+                android:title = "Appointments" />
+
+            <item
+                android:id = "@+id/nav_chat_history"
+                android:icon = "@drawable/quest"
+                android:title = "Chat History" />
+
+            <item
+                android:id = "@+id/nav_vitals"
+                android:icon = "@drawable/ic_vitals"
+                android:title = "Vitals" />
+
+            <item
+                android:id = "@+id/nav_my_records"
+                android:icon = "@drawable/medical_history"
+                android:title = "Medical Records" />
+
+        </group>
+
+        <group
+            android:id = "@+id/menuOrder"
+            android:checkableBehavior = "single">
+
+            <item
+                android:id = "@+id/nav_order_history"
+                android:icon = "@drawable/orders"
+                android:title = "Orders" />
+
+            <item
+                android:id = "@+id/nav_subscription_plan"
+                android:icon = "@drawable/subscriptions"
+                android:title = "Select a Plan" />
+
+            <item
+                android:id = "@+id/nav_billing_history"
+                android:icon = "@drawable/ic_billing"
+                android:title = "Billing History" />
+
+        </group>
+
+        <group
+            android:id="@+id/menuDiagnostics"
+            android:checkableBehavior = "single">
+            <item
+                android:id = "@+id/nav_diagnosis_history"
+                android:icon = "@drawable/ic_diagnostics_history"
+                android:title = "Diagnostics History" />
+
+        </group>
+
+        <group
+            android:id = "@+id/menuProfile"
+            android:checkableBehavior = "single">
+
+            <item
+                android:id = "@+id/nav_family"
+                android:icon = "@drawable/family"
+                android:title = "Family" />
+
+            <item
+                android:id = "@+id/nav_profile"
+                android:icon = "@drawable/profile"
+                android:title = "Profile" />
+            <item
+                android:id = "@+id/nav_blogs"
+                android:icon = "@drawable/ic_blog"
+                android:title = "Blogs" />
+
+            <item
+                android:id = "@+id/nav_settings"
+                android:icon = "@drawable/setting"
+                android:title = "Settings" />
+
+        </group>
+
+    </group>
+
+</menu>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/calendar_main"
+    android:layout_width="wrap_content"
+    android:layout_height="90dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center" >
+
+   <FrameLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+
+      <ImageView
+          android:id="@+id/attached_image"
+          android:layout_width="75dp"
+          android:layout_height="75dp"
+          android:src="@drawable/ic_place_image"
+          android:scaleType="centerCrop"
+          android:layout_marginEnd="@dimen/padding_10"
+          android:layout_marginTop="@dimen/padding_10"
+          android:contentDescription="@null" />
+
+      <ImageButton
+          android:id = "@+id/ib_remove_attached_image"
+          android:layout_width = "wrap_content"
+          android:layout_height = "wrap_content"
+          android:src = "@drawable/ic_close_circle"
+          android:contentDescription="@null"
+          android:background="@drawable/no_border"
+          android:onClick="onClick"
+          android:layout_gravity="end|top"
+          android:tint = "@color/light_red" />
+
+   </FrameLayout>
+
+   <View
+       android:layout_width="5dp"
+       android:layout_height="wrap_content" />
+
+</LinearLayout>

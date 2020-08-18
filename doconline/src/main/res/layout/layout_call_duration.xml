@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_margin="20dp"
+    android:background="@drawable/rectangle_curve_edges_white_style"
+    android:padding="5dp"
+    android:elevation="5dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civ_doctor_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_avatar"
+        app:civ_border_color="@color/white"
+        app:civ_border_width="1dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_doctor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/civ_doctor_avatar"
+        android:ellipsize="end"
+        android:layout_marginTop="10dp"
+        android:maxLines="1"
+        android:text="Shubham Anand"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"/>
+    
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Call duration"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_doctor_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:24"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="16sp"
+        android:layout_below="@+id/tv_duration"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_dismiss"
+        style="@style/LinkButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_time"
+        android:layout_centerHorizontal="true"
+        android:text="@string/Dismiss"
+        android:textAllCaps="false" />
+</RelativeLayout>

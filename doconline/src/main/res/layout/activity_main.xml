@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    android:fitsSystemWindows="false"
+    tools:context="com.doconline.doconline.login.MainActivity">
+
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content" >
+
+        <androidx.core.widget.NestedScrollView
+            style="@style/NestedScrollViewStyle"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="?attr/bannerBackground"
+                    android:fitsSystemWindows="true" >
+
+                    <ImageButton
+                        android:id="@+id/ib_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|start"
+                        android:background="@drawable/no_border"
+                        android:contentDescription="@null"
+                        android:layout_margin="@dimen/padding_10"
+                        android:src="@drawable/ic_left_arrow_white"/>
+
+                    <ImageView
+                        android:id="@+id/iv_logo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="60dp"
+                        android:contentDescription="@null"
+                        android:src="?attr/logoMain"/>
+
+                    <TextView
+                        android:id="@+id/tv_skip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:layout_margin="@dimen/padding_10"
+                        android:text="@string/button_skip" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/container_body"
+                    style="@style/PageControllerStyle"
+                    app:layout_collapseMode="parallax"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include layout="@layout/progress_block" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

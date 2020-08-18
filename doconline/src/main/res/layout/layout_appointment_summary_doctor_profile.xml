@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+    <ImageView
+        android:id = "@+id/doctor_image"
+        android:layout_width = "80dp"
+        android:layout_height = "80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding_5"
+        android:src = "@drawable/ic_avatar"
+        android:clickable="true"
+        android:onClick="onClick" />
+
+    <!--
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id = "@+id/doctor_image"
+        android:layout_width = "80dp"
+        android:layout_height = "80dp"
+        android:layout_gravity="center"
+        android:src = "@drawable/anonymous"
+        app:civ_border_color = "@color/white"
+        app:civ_border_width = "1dp"
+        android:clickable="true"
+        android:onClick="onClick" />
+    -->
+
+    <TextView
+        android:id="@+id/doctor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="14sp"
+        android:layout_gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:layout_toEndOf="@id/doctor_image"
+        android:text="XXXXX" />
+
+    <TextView
+        android:id="@+id/specialization"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextSecondaryColor"
+        android:textSize="13sp"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:layout_below="@id/doctor_name"
+        android:layout_toEndOf="@id/doctor_image"
+        android:text="XXX" />
+
+    <TextView
+        android:id="@+id/doctor_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="13sp"
+        android:layout_gravity="center"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:layout_below="@id/specialization"
+        android:layout_toEndOf="@id/doctor_image"
+        android:text="0.00" />
+
+    <RatingBar
+        android:id="@+id/doctor_rating_star"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/SmallRatingBar"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_below="@id/specialization"
+        android:layout_toEndOf="@id/doctor_rating"
+        android:numStars="5"
+        android:stepSize=".5" />
+
+    <TextView
+        android:id="@+id/remarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="13sp"
+        android:layout_gravity="center"
+        android:paddingStart="15dp"
+        android:layout_marginTop="5dp"
+        android:paddingEnd="0dp"
+        android:layout_toEndOf="@id/doctor_image"
+        android:layout_below="@id/doctor_rating_star"
+        android:text="Doctor Remarks" />
+
+    <TextView
+        android:id="@+id/doctor_remarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/myTextSecondaryColor"
+        android:textSize="13sp"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"
+        android:layout_below="@id/remarks"
+        android:layout_toEndOf="@id/doctor_image"
+        android:text="XXXXXXXX" />
+
+</RelativeLayout>

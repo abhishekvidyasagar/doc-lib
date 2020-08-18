@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_root_view"
+    style="@style/ParentLayoutStyle"
+    tools:context=".profile.DrugAllergyActivity">
+
+    <include layout="@layout/appbar_layout"
+        android:id="@+id/headers"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/headers"
+        android:id="@+id/search_layout">
+
+        <SearchView
+            android:id="@+id/search_medicines"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:inputType="textFilter"
+            android:background="@drawable/button_boarder"
+            android:closeIcon="@drawable/ic_close_grey"
+            android:searchIcon="@drawable/places_ic_search"
+            android:queryHint="Minimum 3 characters required to search" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/add_button_layout"
+        android:layout_below="@+id/search_layout">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add "
+            android:id="@+id/add_medicines_btn"
+            android:onClick="addMedicinesManually"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/round_ui_button_style"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/add_button_layout"
+        android:id="@+id/medicines_list_layout"
+        android:padding="5dp">
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/medicines_listview"></ListView>
+
+    </LinearLayout>
+
+    <include layout="@layout/layout_loading" />
+
+</RelativeLayout>

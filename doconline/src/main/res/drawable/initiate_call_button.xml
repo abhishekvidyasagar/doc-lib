@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <shape>
+
+            <solid
+                android:color="@color/reject_call" />
+
+            <corners
+                android:radius="60dp" />
+
+        </shape>
+    </item>
+
+
+    <item>
+        <shape>
+
+            <solid
+                android:color="@color/reject_call_pressed" />
+
+            <corners
+                android:radius="60dp" />
+
+        </shape>
+    </item>
+</selector>
+
+<!--
+<vector xmlns:android = "http://schemas.android.com/apk/res/android"
+        android:width = "105dp"
+        android:height = "105dp"
+        android:viewportHeight = "105.0"
+        android:viewportWidth = "105.0">
+    <path
+        android:fillColor = "@color/endCall"
+        android:pathData = "M0.25,52.68a51.93,51.91 0,1 0,103.87 0a51.93,51.91 0,1 0,-103.87 0z"
+        android:strokeColor = "#00000000"
+        android:strokeWidth = "1" />
+</vector>
+-->

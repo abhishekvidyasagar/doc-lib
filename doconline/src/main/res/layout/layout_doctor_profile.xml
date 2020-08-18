@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/ibCloseInfoMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/no_border"
+        android:contentDescription="@null"
+        android:padding="10dp"
+        android:src="@drawable/ic_close_grey" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:onClick="onClick"
+        android:src="@drawable/doctor"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="1dp" />
+
+    <TextView
+        android:id="@+id/tvFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Dr. Akash Dutta"
+        android:textColor="@color/myTextPrimaryColor"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSpecialization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Cape Town, RSA"
+        android:textColor="@color/myTextSecondaryColor"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tvQualification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/myTextSecondaryColor"
+        android:textSize="13sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/divider" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp">
+
+        <TextView
+            android:id="@+id/labelMci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MCI:"
+            android:textColor="@color/myTextPrimaryColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvMciCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/labelMci"
+            android:gravity="end"
+            android:text="XXXXXXXXXX"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tvMciCode"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/labelPractitionerNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Practitioner No:"
+            android:textColor="@color/myTextPrimaryColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPractitionerNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/labelPractitionerNo"
+            android:gravity="end"
+            android:text="XXXXXXXXXX"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/labelPractitionerNo"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp">
+
+        <TextView
+            android:id="@+id/labelRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ratings:"
+            android:textColor="@color/myTextPrimaryColor"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/doctor_rating_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/SmallRatingBar"
+            android:layout_marginStart="5dp"
+            android:numStars="5"
+            android:layout_toStartOf="@+id/tvRatings"
+            android:stepSize=".5"
+            android:layout_marginEnd="5dp"/>
+
+        <TextView
+            android:id="@+id/tvRatings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="0.0"
+            android:textColor="@color/myTextSecondaryColor"
+            android:textSize="13sp"
+            android:layout_alignParentEnd="true"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/labelRatings"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/divider" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_consent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/padding_30"
+        android:layout_marginStart="@dimen/padding_30"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_consent_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start|center"
+            android:text="Allow doctor to access my documents"
+            android:textColor="@color/text_dim_grey"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_consent"
+            style="@style/MySwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:checked="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

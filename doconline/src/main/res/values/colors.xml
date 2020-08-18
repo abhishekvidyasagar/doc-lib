@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6DBF00</color>
+    <color name="colorPrimaryDark">#6DBF00</color>
+    <color name="colorAccent">#005E82</color>
+
+    <color name="myTextPrimaryColor">#212121</color>
+    <color name="myTextSecondaryColor">#727272</color>
+    <color name="divider">#ededed</color>
+    <color name="place_holder">#b0b0b0</color>
+    <color name="grey_background">#f3f3f3</color>
+    <color name="transparent_background">#60000000</color>
+    <color name="caption_background">#30000000</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="transparent_white">#40000000</color>
+    <color name="yellow">#f39c12</color>
+    <color name="orange">#f3e812</color>
+    <color name="icon_transparent">#8C8181</color>
+    <color name="empty_view">#c4c4c4</color>
+    <color name = "teal">#00796B</color>
+    <color name = "skyblue">#03A9F4</color>
+    <color name = "light_green">#4CAF50</color>
+    <color name = "light_red">#ff3232</color>
+    <color name = "gradientStart">#5B5B5B</color>
+    <color name = "gradientEnd">#393939</color>
+    <color name = "gradientAudioOnlyStart">#343434</color>
+    <color name = "gradientAudioOnlyEnd">#6e6e6e</color>
+    <color name = "audiOnlyBackground">#7e7e7e</color>
+    <color name = "white">#FFFFFF</color>
+    <color name = "black">#000000</color>
+    <color name = "startCall">#6aadbf</color>
+    <color name = "endCall">#cb1e28</color>
+    <color name = "quality_warning">#fef9c8</color>
+    <color name = "quality_warning_lifted">#68f568</color>
+    <color name = "warning_text">#ad7212</color>
+    <color name = "text_color_call_type">#c7c6c6</color>
+    <color name = "text_color_also_on_call">@color/text_color_call_type</color>
+    <color name = "text_color_other_inc_users">#1f1f1f</color>
+    <color name = "tab_background_color">#05424c</color>
+    <color name = "text_color_appointment_dates">#323c3f</color>
+    <color name = "light_white">#f8f8f8</color>
+    <color name = "background_color_light_grey">#e8e8e8</color>
+    <color name = "text_dim_black">#dd323c3f</color>
+    <color name = "text_dim_grey">#7c7c7c</color>
+    <color name = "book_consultation_orage_button">#F8826C</color>
+    <color name = "divider_drawer">#eaebeb</color>
+    <color name = "purple">#837197</color>
+    <color name = "unselected_bg_subscription_pack">#c0c0c0</color>
+    <color name = "ninty_percent_opaque_black">#e6000000</color>
+    <color name = "eighty_percent_opaque_black">#CC000000</color>
+    <color name = "text_silver_grey">#c2c2c2</color>
+    <color name = "text_pricing_light_grey">#898989</color>
+    <color name = "appointment_confirmation_image_border">#65bfaf</color>
+    <color name="secondary_dark">#b3b3b3</color>
+    <color name="secondary">#f2f2f2</color>
+    <color name="primary_dark">#5cacbd</color>
+    <color name="primary">#3352abbd</color>
+    <color name="accent">#043742</color>
+    <color name="primary_text">#888888</color>
+    <color name="input_text">#828286</color>
+    <color name="info_text">#afafaf</color>
+    <color name="alert">#fefac7</color>
+    <color name="info">#AAAAAA</color>
+    <color name="red">#ff0000</color>
+    <color name="dark_red">#DF6F67</color>
+    <color name="blue">#2d5d88</color>
+    <color name="blue_A2E5F5">#A2E5F5</color>
+    <color name="accept_call">#6ad036</color>
+    <color name="accept_call_pressed">#57ca1d</color>
+    <color name="reject_call">#e42b19</color>
+    <color name="reject_call_pressed">#e21400</color>
+    <color name="multiple_image_select_primary">#673AB7</color>
+    <color name="multiple_image_select_primaryDark">#512DA8</color>
+    <color name="multiple_image_select_primaryLight">#D1C4E9</color>
+    <color name="multiple_image_select_accent">#536DFE</color>
+    <color name="multiple_image_select_divider">#B6B6B6</color>
+    <color name="multiple_image_select_albumTextBackground">#99FFFFFF</color>
+    <color name="star_active">#005E82</color>
+    <color name="bg_row_background">#05708b</color>
+    <color name="ivory">#fffff0</color>
+    <color name="diagnostics_green">#72cb72</color>
+    <color name="underline">#fc2c2c</color>
+    <color name="bmi_under_weight">#1a648e</color>
+    <color name="bmi_normal_weight">#6dbd45</color>
+    <color name="bmi_over_weight">#f2ae80</color>
+    <color name="bmi_obase">#f07436</color>
+    <color name="bmi_extreme_obase">#c9444f</color>
+
+
+    <!-- other theme for betterplace-->
+    <color name="betterPlacePrimaryColor">#54B3A9</color>
+    <color name="betterPlacePrimaryDarkColor">#54B3A9</color>
+    <color name="betterplaceAccentColor">#3375B3</color>
+
+    <!-- other theme for tata-->
+    <color name="tataPrimaryColor">#4669b0</color>
+    <color name="tataPrimaryDarkColor">#4669b0</color>
+    <color name="tataAccentColor">#4669b0</color>
+
+</resources>

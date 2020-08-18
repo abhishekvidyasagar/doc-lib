@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_cart_diagnostics"
+        app:icon="@drawable/ic_cart_white"
+        android:title="Cart"
+        android:orderInCategory="99"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_notification"
+        android:orderInCategory="100"
+        android:title="@string/action_notification"
+        android:icon="@drawable/ic_bell"
+        app:showAsAction="always" />
+
+</menu>

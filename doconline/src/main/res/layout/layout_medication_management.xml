@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ParentLayoutStyle"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".disease.MedicationManagementActivity" >
+
+    <include layout="@layout/layout_loading" />
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/headers"
+            android:orientation="vertical"
+            android:padding="6dp"
+            android:id="@+id/search_layout">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="        Search for drugs"/>
+            <SearchView
+                android:id="@+id/search_medicines"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textFilter"
+                android:closeIcon="@drawable/ic_close_grey"
+                android:searchIcon="@drawable/places_ic_search"
+                android:queryHint="Minimum 3 characters required to search" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/black"/>
+
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/medicines_listview"></ListView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_name"
+            style="@style/TextInputLayoutStyle"
+            android:visibility="gone"
+            android:padding="4dp" >
+
+            <EditText
+                android:id="@+id/editName"
+                style="@style/DrawableEditTextStyle"
+                android:hint="@string/hint_medicine_compulsary"
+                android:maxLines="1"
+                android:maxLength="100"
+                android:inputType="text"
+                android:drawableStart="@drawable/ic_icon_main" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/datepicker_layout_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/place_holder"
+                android:textSize="12sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="@dimen/padding_30"
+                android:text="@string/hint_date_form" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/lastPeriodDatepicker1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:tint="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/ic_icon_calender"/>
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear_date1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_border"
+                    android:contentDescription="@null"
+                    android:tint="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:src="@null"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/padding_5"
+                android:background="@color/myTextPrimaryColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/datepicker_layout_till"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/place_holder"
+                android:textSize="12sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="@dimen/padding_30"
+                android:text="@string/hint_date_to" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/lastPeriodDatepicker2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:tint="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/ic_icon_calender"/>
+
+                <TextView
+                    android:id="@+id/tv_till"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_marginStart="5dp"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear_date2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_border"
+                    android:contentDescription="@null"
+                    android:tint="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:src="@null"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/myTextPrimaryColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timepicker_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:padding="4dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/place_holder"
+                android:textSize="12sp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="@dimen/padding_30"
+                android:text="@string/hint_intake_time" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/lastPeriodTimePicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:tint="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="3dp"
+                    android:src="@drawable/ic_icon_clock"/>
+
+                <TextView
+                    android:id="@+id/tv_intake_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textColor="@color/myTextPrimaryColor"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:id="@+id/ib_clear_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/no_border"
+                    android:contentDescription="@null"
+                    android:tint="@color/colorAccent"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:onClick="onClick"
+                    android:visibility="gone"
+                    android:src="@null"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:background="@color/myTextPrimaryColor" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:visibility="gone"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/myTextSecondaryColor"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:textSize="13sp"
+                    android:text="Alarm " />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switch_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/MySwitch"
+                    android:layout_marginEnd="10dp"
+                    android:checked="true" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_notes"
+            style="@style/TextInputLayoutStyle"
+            android:padding="4dp" >
+
+            <EditText
+                android:id="@+id/editNotes"
+                style="@style/DrawableEditTextStyle"
+                android:layout_gravity="bottom"
+                android:inputType="textMultiLine"
+                android:enabled="true"
+                android:isScrollContainer="true"
+                android:drawableStart="@drawable/ic_icon_edit"
+                android:hint="Note" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_no_of_days"
+            style="@style/TextInputLayoutStyle"
+            android:padding="4dp" >
+
+            <EditText
+                android:id="@+id/editNoOfDays"
+                style="@style/DrawableEditTextStyle"
+                android:layout_gravity="bottom"
+                android:inputType="number"
+                android:maxLength="3"
+                android:enabled="true"
+                android:isScrollContainer="true"
+                android:drawableStart="@drawable/ic_icon_edit"
+                android:hint="No of Days" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/input_layout_status"
+            style="@style/TextInputLayoutStyle"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/editStatus"
+                style="@style/DrawableEditTextStyle"
+                android:layout_gravity="bottom"
+                android:inputType="textMultiLine"
+                android:tag="0"
+                android:enabled="true"
+                android:isScrollContainer="true"
+                android:drawableStart="@drawable/ic_icon_edit"
+                android:hint="Status" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/myTextPrimaryColor" />
+
+    </LinearLayout>
+
+</RelativeLayout>

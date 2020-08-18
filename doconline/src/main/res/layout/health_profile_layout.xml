@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ParentLayoutStyle"
+    android:orientation="vertical"
+    android:background="@drawable/rectangle_curve_edges_white_style"
+    android:padding="10dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_height"
+        style="@style/TextInputLayoutStyle" >
+
+        <EditText
+            android:id="@+id/editHeight"
+            style="@style/EditTextStyle"
+            android:hint="@string/hint_height"
+            android:inputType="numberDecimal"
+            android:maxLength="3"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_weight"
+        style="@style/TextInputLayoutStyle" >
+
+        <EditText
+            android:id="@+id/editWeight"
+            style="@style/EditTextStyle"
+            android:hint="@string/hint_weight"
+            android:inputType="numberDecimal"
+            android:maxLength="3"
+            android:maxLines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--layout for old - smoking -->
+    <Button
+        android:id="@+id/btn_Calculate_BMI"
+        android:layout_width="135dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_ui_button_style"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="onClick"
+        android:text="Calculate BMI"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:textSize="12sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="4dp"
+            android:text="@string/hint_smoking" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_smoke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="0dp"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--LAYOUT for life style activity-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_lifestyelactivity" />
+
+        <TextView
+            android:id="@+id/spinner_lifestyleactivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:tag="0"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/place_holder"
+        android:padding="5dp"
+        android:text="@string/hint_sleepstyle" />
+
+    <!--LAYOUT for sleep duration -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_totalsleepduration" />
+
+        <TextView
+            android:id="@+id/spinner_sleepduration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:tag="0"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--LAYOUT for sleep pattern -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_sleeppattern" />
+
+        <TextView
+            android:id="@+id/spinner_sleeppattern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:tag="0"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--LAYOUT for exercise per week -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_exerciseperweek" />
+
+        <TextView
+            android:id="@+id/spinner_exerciseperweek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:tag="0"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--LAYOUT for pregnancy status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/pregnancy_layout">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_pregnancystatus" />
+
+        <TextView
+            android:id="@+id/spinner_pregnancystatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:tag="0"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/ic_right_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--LAYOUT for marital status-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_maritalstatus" />
+
+        <TextView
+            android:id="@+id/spinner_maritalstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:tag="0"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_allergies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Allergies"
+            android:layout_weight="1"
+            android:textColor="@color/place_holder"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/add_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClick"
+            android:paddingEnd="@dimen/padding_5"
+            android:paddingStart="@dimen/padding_0"
+            android:textColor="@color/colorAccent"
+            android:text="@string/button_add_new"
+            android:gravity="end"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="10dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:id="@+id/medication_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:clickable="true"
+        android:padding="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_medication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:text="Medications"
+            android:tag="0"
+            android:drawableEnd="@drawable/ic_right_arrow"
+            />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/myTextPrimaryColor" />
+
+    </LinearLayout>
+
+    <!--drug allergy layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+        <LinearLayout
+            android:id="@+id/layout_drug_allergies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Drug Allergies"
+                android:layout_weight="1"
+                android:textColor="@color/place_holder"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/add_new_drug_alergy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="@color/colorAccent"
+                android:text="@string/button_add_new"
+                android:gravity="end"
+                android:textSize="13sp"
+                />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_drug_allergy"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+    <!--old ic_medical history invisible mode-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout_medical_history"
+        style="@style/TextInputLayoutStyle"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editMedicalHistory"
+            style="@style/EditTextStyle"
+            android:inputType="textMultiLine"
+            android:isScrollContainer="true"
+            android:hint="@string/hint_medical_history" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--reason for switch in medicine-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_switchinmedicine" />
+
+        <TextView
+            android:id="@+id/spinner_switchinmedicine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:tag="0"
+            android:textColor="@color/black"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--New Medical history-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_medicalhistory" />
+
+        <TextView
+            android:id="@+id/spinner_medicalhistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:tag="0"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+    <!--Medical Insurence-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/place_holder"
+            android:text="@string/hint_medicalinsurence" />
+
+        <TextView
+            android:id="@+id/spinner_medicalinsurence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="5dp"
+            android:tag="0"
+            android:drawableRight="@drawable/ic_down_arrow"
+            android:backgroundTint="@color/colorAccent" />
+
+        <View
+            android:layout_height="1dp"
+            android:layout_width="match_parent"
+            android:background="@color/myTextPrimaryColor" />
+    </LinearLayout>
+
+
+    <include layout="@layout/button_sample" />
+
+</LinearLayout>
