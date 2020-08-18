@@ -4,7 +4,9 @@ import android.os.Build;
 
 import com.doconline.doconline.app.Constants;
 import com.doconline.doconline.app.MyApplication;
+/*
 import com.readystatesoftware.chuck.ChuckInterceptor;
+*/
 
 import java.net.CookieManager;
 import java.net.CookiePolicy;
@@ -37,13 +39,16 @@ public class MyOkHttpClient
                             CipherSuite.TLS_DHE_RSA_WITH_AES_128_GCM_SHA256)
                     .build();
 
+
             return new OkHttpClient.Builder()
                     .connectionSpecs(Collections.singletonList(spec))
                     .connectTimeout(Constants.CONNECTION_TIMEOUT, TimeUnit.SECONDS)
                     .readTimeout(Constants.READ_TIMEOUT, TimeUnit.SECONDS)
                     .retryOnConnectionFailure(true)
                     .cookieJar(new CookieStore())
+/*
                     .addInterceptor(new ChuckInterceptor(MyApplication.getInstance()))
+*/
                     .writeTimeout(Constants.WRITE_TIMEOUT, TimeUnit.SECONDS).build();
         }
 
@@ -52,7 +57,9 @@ public class MyOkHttpClient
                 .readTimeout(Constants.READ_TIMEOUT, TimeUnit.SECONDS)
                 .retryOnConnectionFailure(true)
                 .cookieJar(new CookieStore())
+/*
                 .addInterceptor(new ChuckInterceptor(MyApplication.getInstance()))
+*/
                 .writeTimeout(Constants.WRITE_TIMEOUT, TimeUnit.SECONDS).build();
     }
 }

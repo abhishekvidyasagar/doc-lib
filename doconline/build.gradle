@@ -104,8 +104,8 @@ dependencies {
     implementation 'net.gotev:uploadservice:3.4.2'
     implementation 'com.squareup.okhttp3:okhttp:3.9.1'
     implementation 'com.google.code.gson:gson:2.8.6'
-    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
-    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+    //debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+    //releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
 
     //UI Progress Bar and Loader Alert Dialog, Multi Image Select, Butter Knife Library
     implementation 'de.hdodenhof:circleimageview:3.0.1'
