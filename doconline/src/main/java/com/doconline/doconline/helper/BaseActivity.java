@@ -52,7 +52,7 @@ public abstract class BaseActivity extends AppCompatActivity implements OnHttpRe
         //assert getSupportActionBar() != null;
         //getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.drawable.action_bar_bg));
 
-        setStatusBarBackground(this);
+        //setStatusBarBackground(this);
 
         this.mController = MyApplication.getInstance();
 
