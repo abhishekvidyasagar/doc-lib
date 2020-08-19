@@ -221,7 +221,7 @@ public class FirebaseChatActivity extends AppCompatActivity implements OnHttpRes
         assert getSupportActionBar() != null;
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-        setStatusBarBackground(this);
+        //setStatusBarBackground(this);
 
         this.mController = MyApplication.getInstance();
         this.addListener();

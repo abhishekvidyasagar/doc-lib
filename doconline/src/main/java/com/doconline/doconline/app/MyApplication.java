@@ -214,14 +214,14 @@ public class MyApplication extends Application
 
 
         //Database copy and initialisation
-        /*try {
+        try {
             db = new DBAdapter(getApplicationContext());
             db.open();
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("KAR", "IOException"
                     + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@222");
-        }*/
+        }
 
 
         try {
