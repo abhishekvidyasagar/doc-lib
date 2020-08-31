@@ -225,10 +225,6 @@ public class MyApplication extends Application
 
 
         try {
-            //currently working with adgyde so using same api for appsflyer too so to avaiod conflicts
-            //commenting below line
-            //uncommenting below line for marketing request
-        //   InitializeAppsFlyerCallback();
 
             AppsFlyerLib.getInstance().enableUninstallTracking(AFSenderID); /* ADD THIS LINE HERE */
 
